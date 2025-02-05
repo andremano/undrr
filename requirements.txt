@@ -1,1 +1,3 @@
-sphinxawesome_theme
+sphinxawesome_theme;
+pip install sphinx-design
+
