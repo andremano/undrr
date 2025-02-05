@@ -15,7 +15,7 @@ Risk concepts
 -------------
 
 Impact chains (include group exercise 2-3 hours)
------------------------------------------------
+------------------------------------------------
 
 Main applications of risk information – focus on impact-based forecasting, EWS
 ------------------------------------------------------------------------------
