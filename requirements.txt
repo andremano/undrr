@@ -1,1 +1,2 @@
-sphinxawesome-theme
+html_theme = 'sphinxawesome_theme'
+pip install sphinx-design
