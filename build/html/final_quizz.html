@@ -102,31 +102,62 @@
 <div id="content" role="main">
 <section id="final-quiz">
 <h1>Final Quiz<a class="headerlink" href="#final-quiz" title="Link to this heading"><span>#</span></a></h1>
-<div class="quizdown"> ---
- primary_color: orange
- secondary_color: lightgray
- text_color: black
- shuffle_questions: false
- ---
+<!DOCTYPE html>
 
-## What is the capital of Germany?
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Fina Quizz</title>
+<script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js"></script>
+</head>
+<script>
+    quizdown.init();
+</script>
 
-&gt; It's the largest city in Germany.
 
-- [x] Berlin
-- [ ] Cologne
-- [ ] Frankfurt
-- [ ] Munich
+<body>
+<div class="quizdown">
+            # What is the capital of Berlin?
 
-## Put the [days](https://en.wikipedia.org/wiki/Day) in order!
+            In this question you are asked a **very** difficult question.
 
- &gt; Monday is the *first* day of the week.
+            &gt; Do some research!
 
- 1. Monday
- 2. Tuesday
- 3. Wednesday
- 4. Friday
- 5. Saturday</div></section>
+            - [x] Berlin
+                &gt; This is the correct answer.
+            - [ ] Stuttgart
+            - [ ] Cologne
+                &gt; Cologne is the fourth largest city.
+            - [ ] Düsseldorf
+
+            # Please bring the following into order!
+
+            Below you find the steps of the machine learning workflow.
+            Do you find the **correct order**?
+
+            &gt; The model selection happens before the `final model evaluation`!
+
+            1. Get the data
+            2. Explore the data
+            3. Train test split with `train_test_split()`
+            4. Feature engineering
+            5. Model selection
+            6. Model evaluation
+            7. Deployment
+
+            # What is the value of `y`?
+
+            ```python
+            x = 2+2 y = x+2 print(y)
+            ```
+
+            - [ ] `2`
+            - [x] `6`
+            - [ ] `None`
+            - [ ] `9`
+        </div>
+</body>
+</html></section>
 </div></div>
 </main>
 </div>
@@ -143,7 +174,5 @@
 <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
 <script defer="defer" src="_static/theme.js?v=073f68d9"></script>
 <script src="_static/design-tabs.js?v=f930bc37"></script>
-<script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
-<script>quizdown.init({"quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"});</script>
 </body>
 </html>
