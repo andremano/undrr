@@ -11,16 +11,20 @@ Data for Disaster Risk Managment
    + List the most used remote sensing systems to create 3D for hazard studies
    + Create a 3D vision yourself using the ILWIS software
 
-This a link to the `Faculty ITC`_. ITC works with Earth Observation like seen in :numref:`session_0_figure0`:
+What is Spatial data?
+^^^^^^^^^^^^^^^^^^^^^
 
-.. _session_0_figure0:
-.. figure:: _static/figures/session_0_figure0.png
-   :alt: The Earth
-   :figclass: align-center
+In geoinformatics, also called geoinformation science, we use the term **spatial data** to describe any type of data that can be linked to a geographic place, usually via coordinates. This means that spatial data has an **unambiguous location** (i.e. it can be associated to a specific location on the Planet). The classic data type is a map, a more modern one could be a satellite image (for an introduction on remote sensing see box). However, we need to consider that our work is largely done digitally on a computer, and that we might want to use data that are actually quite variable in nature. When we think about disasters or risk, we may want to include
 
-   The Earth as seen on Google Earth
++ Tabular data or statistics (e.g. on the number of hazard or disaster events of a certain type and in a given time period);
++ Thematic data (e.g. a road or river network, soil types, or digital elevation models [DEMs]);
++ Topographic maps;
++ Model results (e.g. for flood hazard or slope instability);
++ Images (e.g. aerial photos or satellite images).
++ Point cloud data (LIDAR and laser scans)
 
-We can also add colapsable boxes like this:
+However, please not that within those major
+data types there are large variations...
 
 .. dropdown:: What is remote sensing?
    :animate: fade-in
@@ -28,22 +32,60 @@ We can also add colapsable boxes like this:
    :color: info
    :margin: 5
 
-   Remote sensing is the acquisition of information about an object or phenomenon without making physical contact with the object, in contrast to in situ or on-site observation. The term is applied especially to acquiring information about Earth and other planets. Remote sensing is used in numerous fields, including geophysics, geography, land surveying and most Earth science disciplines (e.g. exploration geophysics, hydrology, ecology, meteorology, oceanography, glaciology, geology). It also has military, intelligence, commercial, economic, planning, and humanitarian applications, among others.
+   Remote sensing (RS) can be described as the process of making measurements or observations without direct contact with the object being measured or observed. Thus, while in the geoinformatics context satellites often come to mind, even amateur photography is a form of RS. It usually results in images, but also includes other measurements, such as of temperatures or gravity.
 
-   In current usage, the term remote sensing generally refers to the use of satellite- or aircraft-based sensor technologies to detect and classify objects on Earth. It includes the surface and the atmosphere and oceans, based on propagated signals (e.g. electromagnetic radiation). It may be split into "active" remote sensing (when a signal is emitted by a satellite or aircraft to the object and its reflection is detected by the sensor) and "passive" remote sensing (when the reflection of sunlight is detected by the sensor)
+   + **Sensors and platforms**. For remote sensing we normally require a **sensor** (i.e. a camera or scanner), but also something that carries the device. Such platforms can be airplanes or satellites, but also other instruments that allow us to place the sensor so that the area or object of interest is exposed, such as balloons or kites. The choice of platform directly affects what we can observe and how. Airplanes and helicopters are flexible in their operation, and by flying relatively low provide good spatial detail. However, such surveys can be expensive and regular imaging of the same area thus costly. Satellites fly on a fixed **orbit**, and are thus less flexible, but can provide data at regular intervals (think of trains on a track). We distinguish between so-called **polar orbiters**, whereby the satellites continuously circle the Earth at an altitude of some 500- 900km, passing over or near the poles. Normally only a relatively narrow strip of Earth underneath the sensor is observed. Modern satellites can also point the sensor sideways for greater flexibility. The other class of satellites is positioned in **geostationary orbit**. This means that the satellite is always directly above a designated place on the equator, moving with the rotating Earth at an altitude of 36,000 km. At that height the sensor can usually observe an entire hemisphere (the side of the Earth facing it), and provide data at any desired frequency. Many weather and communication satellites fall in this category, while most Earth observation satellites are polar orbiters.
+
+   + **Collecting information**. The data we obtain depend primarily on the sensor type, just like you might take color or black/white photos with your camera. The secret to taking such different photos lies in the **electromagnetic energy** :numref:`the_em_spectrum`, which is what our sensors can detect. The most common source of energy is reflected sunlight, which, as you probably know, contains visible light, but also ultraviolet (UV), infrared (IR), thermal and other energy (Figure 2.1). Which part of this continuous energy band we capture depends on the sensor. Your camera might only capture visible light, while others can “see” UV, IR or thermal energy.
+
+    .. _the_em_spectrum:
+    .. figure:: _static/figures/data_for_disaster_risk_managment/the_em_spectrum.jpg
+       :alt: The EM spectrum
+       :figclass: align-centersession_0_figure0:
+
+       The EM spectrum
+
+   + **The data**. The data our sensors record typically have the form of a grid, or raster (Figure 2.3). Rows and columns in that grid are populated by cells. These cells contain the information recorded by the sensor. A sensor can also have several **bands**, meaning that different sections of the electromagnetic spectrum are observed :numref:`grid_structure`. Thus for the area observed we will have an image that contains several bands, and the cell corresponding to a small part on the ground will have one data value for each band. The most important point to understand here is that different materials on the ground reflect energy in a characteristic spectral pattern. For example, vegetation is characterized by high energy in the near infrared (NIR), while for water the energy is very low. In figure 2.2 this would result in high values (digital numbers [DN]) for vegetation and low values for water in the band corresponding to the NIR.
+
+    .. _grid_structure:
+    .. figure:: _static/figures/data_for_disaster_risk_managment/grid_structure.png
+       :alt: Grid strucrure of a multi-band image
+       :figclass: align
+
+       Grid strucrure of a multi-band image
+
+   + **Displaying an image**. Once we have our data we can either display them directly on our monitor (if they are already digital), or first scan them. A monitor works with 3 different color channels (blue, green, red), and is able to generate any color (including black and white) with a combination of those 3 colors. Thus we can take an image with only 1 or with several bands and display 1 band at a time, thus as a **pan-chromatic** image :numref:`image_visualizations`. We can also use 3 bands and display them as a so- called **true-color composite** (B), which looks like the scene would look to us from space. However, we can essentially assign any of the image bands to one of the 3 colors. A typical combination, called a **false-color composite**, is shown in C, where the information from the  NIR band is displayed in red. Recall that vegetation leads to high DN values in the NIR, hence the high vegetation signal leads to a
+
+    .. _image_visualizations:
+    .. figure:: _static/figures/data_for_disaster_risk_managment/image_visualizations.png
+       :alt: A – panchromatic, B- true-color, C and D – false color composites
+       :figclass: align
+
+       A – panchromatic, B- true-color, C and D – false color composites
+       
+   + **Enhancing an image**. Sometimes, for information to be made more visible, we have to enhance the image. One typical form is **stretching**. Our displays are typically able to display 256 brightness levels for each color, corresponding to 8bit. However, very often the image data only have a limited range, say with DNs between 50 and 150, where are not very bright or very dark features on the ground. To achieve a display with a richer contrast we can stretch the data over the entire available range (0-255). The same concept applies to other data types you will work with, for example elevation. The elevation file for our test area ranges between approximately 900 and 1350m. By default they will be stretched over the available display range. However, we can also stretch a small value range, say 950-1000, to highlight more details. Another common enhancing method is **filtering** :numref:`filtering`. This is a so-called neighborhood analysis, often used to smoothen an image or to highlight edges. In the example the average of all cells shown in grey in the input image is calculated and written to a new file, before the filter template moves to the next pixel (hatched box). Many filter types have been developed, which you will also use in the ILWIS exercises (for example shadow and smoothing filters).
+
+    .. _filtering:
+    .. figure:: _static/figures/data_for_disaster_risk_managment/filtering.jpg
+       :alt: Input and output result of filtering:  In this case, a smoothing filter was applied.
+       :figclass: align 
+
+       Input and output result of filtering:  In this case, a smoothing filter was applied.
+
+    + **Other factors influencing our data**. RS data come in many forms, often described by **sensor type**, as well as **spatial, temporal** and **spectral resolution**. Sensors recording reflected sunlight or energy emitted by the earth are called **passive sensors**. However, we also have sensors that emit their own energy, which is reflected by the earth, just like you use a flash on your camera. These are **active sensors**, well-known examples being radar (see Figure 2.10) or laser scanning. The **spatial resolution** describes the size of the ground area represented in a single pixel. This largely depends on the distance between the sensor and the object. While aerial photos may have a resolution of a few cm, data from polar orbiters range between about 50 cm and 1 km per cell. Sensors on geostationary satellites, being very far away, record data at resolutions of a few km. The **temporal** resolution describes the possible frequency of repeat observations. For aerial surveys this can be years. Depending on the type of polar orbiter and sensor, their temporal resolution varies between approx. 1 and 44 days, while geostationary sensors record data up to every 15 minutes. The **spectral** resolution describes how narrow a slice of the EM spectrum a sensor band records.
 
 
 Main types of data (Remote Sensing, Digital Elevation, Meteo data)
-------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Main sources of data
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 Data sharing and dissemination (1-1.5 hour exercise)
-----------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Data quality (granularity, fitness for purpose)
------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Data sovereignty (control , licensing)
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
