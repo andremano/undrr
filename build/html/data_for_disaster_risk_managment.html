@@ -136,36 +136,30 @@ data types there are large variations…</p>
 <li><p class="sd-card-text"><strong>Sensors and platforms</strong>. For remote sensing we normally require a <strong>sensor</strong> (i.e. a camera or scanner), but also something that carries the device. Such platforms can be airplanes or satellites, but also other instruments that allow us to place the sensor so that the area or object of interest is exposed, such as balloons or kites. The choice of platform directly affects what we can observe and how. Airplanes and helicopters are flexible in their operation, and by flying relatively low provide good spatial detail. However, such surveys can be expensive and regular imaging of the same area thus costly. Satellites fly on a fixed <strong>orbit</strong>, and are thus less flexible, but can provide data at regular intervals (think of trains on a track). We distinguish between so-called <strong>polar orbiters</strong>, whereby the satellites continuously circle the Earth at an altitude of some 500- 900km, passing over or near the poles. Normally only a relatively narrow strip of Earth underneath the sensor is observed. Modern satellites can also point the sensor sideways for greater flexibility. The other class of satellites is positioned in <strong>geostationary orbit</strong>. This means that the satellite is always directly above a designated place on the equator, moving with the rotating Earth at an altitude of 36,000 km. At that height the sensor can usually observe an entire hemisphere (the side of the Earth facing it), and provide data at any desired frequency. Many weather and communication satellites fall in this category, while most Earth observation satellites are polar orbiters.</p></li>
 <li><p class="sd-card-text"><strong>Collecting information</strong>. The data we obtain depend primarily on the sensor type, just like you might take color or black/white photos with your camera. The secret to taking such different photos lies in the <strong>electromagnetic energy</strong> <a class="reference internal" href="#the-em-spectrum"><span class="std std-numref">Fig. 1</span></a>, which is what our sensors can detect. The most common source of energy is reflected sunlight, which, as you probably know, contains visible light, but also ultraviolet (UV), infrared (IR), thermal and other energy (Figure 2.1). Which part of this continuous energy band we capture depends on the sensor. Your camera might only capture visible light, while others can “see” UV, IR or thermal energy.</p></li>
 </ul>
-<blockquote>
-<div><figure class="align-centersession-0-figure0 align-default" id="id1">
+<figure class="align-centersession-0-figure0 align-default" id="id1">
 <span id="the-em-spectrum"></span><img alt="The EM spectrum" src="_images/the_em_spectrum.jpg"/>
 <figcaption>
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">The EM spectrum</span><a class="headerlink" href="#id1" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
-</div></blockquote>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>The data</strong>. The data our sensors record typically have the form of a grid, or raster (Figure 2.3). Rows and columns in that grid are populated by cells. These cells contain the information recorded by the sensor. A sensor can also have several <strong>bands</strong>, meaning that different sections of the electromagnetic spectrum are observed <a class="reference internal" href="#grid-structure"><span class="std std-numref">Fig. 2</span></a>. Thus for the area observed we will have an image that contains several bands, and the cell corresponding to a small part on the ground will have one data value for each band. The most important point to understand here is that different materials on the ground reflect energy in a characteristic spectral pattern. For example, vegetation is characterized by high energy in the near infrared (NIR), while for water the energy is very low. In figure 2.2 this would result in high values (digital numbers [DN]) for vegetation and low values for water in the band corresponding to the NIR.</p></li>
 </ul>
-<blockquote>
-<div><figure class="align align-default" id="id2">
+<figure class="align align-default" id="id2">
 <span id="grid-structure"></span><img alt="Grid strucrure of a multi-band image" src="_images/grid_structure.png"/>
 <figcaption>
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">Grid strucrure of a multi-band image</span><a class="headerlink" href="#id2" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
-</div></blockquote>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Displaying an image</strong>. Once we have our data we can either display them directly on our monitor (if they are already digital), or first scan them. A monitor works with 3 different color channels (blue, green, red), and is able to generate any color (including black and white) with a combination of those 3 colors. Thus we can take an image with only 1 or with several bands and display 1 band at a time, thus as a <strong>pan-chromatic</strong> image <a class="reference internal" href="#image-visualizations"><span class="std std-numref">Fig. 3</span></a>. We can also use 3 bands and display them as a so- called <strong>true-color composite</strong> (B), which looks like the scene would look to us from space. However, we can essentially assign any of the image bands to one of the 3 colors. A typical combination, called a <strong>false-color composite</strong>, is shown in C, where the information from the  NIR band is displayed in red. Recall that vegetation leads to high DN values in the NIR, hence the high vegetation signal leads to a</p></li>
 </ul>
-<blockquote>
-<div><figure class="align align-default" id="id3">
+<figure class="align align-default" id="id3">
 <span id="image-visualizations"></span><img alt="A – panchromatic, B- true-color, C and D – false color composites" src="_images/image_visualizations.png"/>
 <figcaption>
 <p><span class="caption-number">Fig. 3 </span><span class="caption-text">A – panchromatic, B- true-color, C and D – false color composites</span><a class="headerlink" href="#id3" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
-</div></blockquote>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Enhancing an image</strong>. Sometimes, for information to be made more visible, we have to enhance the image. One typical form is <strong>stretching</strong>. Our displays are typically able to display 256 brightness levels for each color, corresponding to 8bit. However, very often the image data only have a limited range, say with DNs between 50 and 150, where are not very bright or very dark features on the ground. To achieve a display with a richer contrast we can stretch the data over the entire available range (0-255). The same concept applies to other data types you will work with, for example elevation. The elevation file for our test area ranges between approximately 900 and 1350m. By default they will be stretched over the available display range. However, we can also stretch a small value range, say 950-1000, to highlight more details. Another common enhancing method is <strong>filtering</strong> <a class="reference internal" href="#filtering"><span class="std std-numref">Fig. 4</span></a>. This is a so-called neighborhood analysis, often used to smoothen an image or to highlight edges. In the example the average of all cells shown in grey in the input image is calculated and written to a new file, before the filter template moves to the next pixel (hatched box). Many filter types have been developed, which you will also use in the ILWIS exercises (for example shadow and smoothing filters).</p></li>
 </ul>

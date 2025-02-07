@@ -38,39 +38,39 @@ data types there are large variations...
 
    + **Collecting information**. The data we obtain depend primarily on the sensor type, just like you might take color or black/white photos with your camera. The secret to taking such different photos lies in the **electromagnetic energy** :numref:`the_em_spectrum`, which is what our sensors can detect. The most common source of energy is reflected sunlight, which, as you probably know, contains visible light, but also ultraviolet (UV), infrared (IR), thermal and other energy (Figure 2.1). Which part of this continuous energy band we capture depends on the sensor. Your camera might only capture visible light, while others can “see” UV, IR or thermal energy.
 
-    .. _the_em_spectrum:
-    .. figure:: _static/figures/data_for_disaster_risk_managment/the_em_spectrum.jpg
-       :alt: The EM spectrum
-       :figclass: align-centersession_0_figure0:
+   .. _the_em_spectrum:
+   .. figure:: _static/figures/data_for_disaster_risk_managment/the_em_spectrum.jpg
+      :alt: The EM spectrum
+      :figclass: align-centersession_0_figure0:
 
-       The EM spectrum
+      The EM spectrum
 
    + **The data**. The data our sensors record typically have the form of a grid, or raster (Figure 2.3). Rows and columns in that grid are populated by cells. These cells contain the information recorded by the sensor. A sensor can also have several **bands**, meaning that different sections of the electromagnetic spectrum are observed :numref:`grid_structure`. Thus for the area observed we will have an image that contains several bands, and the cell corresponding to a small part on the ground will have one data value for each band. The most important point to understand here is that different materials on the ground reflect energy in a characteristic spectral pattern. For example, vegetation is characterized by high energy in the near infrared (NIR), while for water the energy is very low. In figure 2.2 this would result in high values (digital numbers [DN]) for vegetation and low values for water in the band corresponding to the NIR.
 
-    .. _grid_structure:
-    .. figure:: _static/figures/data_for_disaster_risk_managment/grid_structure.png
-       :alt: Grid strucrure of a multi-band image
-       :figclass: align
+   .. _grid_structure:
+   .. figure:: _static/figures/data_for_disaster_risk_managment/grid_structure.png
+      :alt: Grid strucrure of a multi-band image
+      :figclass: align
 
-       Grid strucrure of a multi-band image
+      Grid strucrure of a multi-band image
 
    + **Displaying an image**. Once we have our data we can either display them directly on our monitor (if they are already digital), or first scan them. A monitor works with 3 different color channels (blue, green, red), and is able to generate any color (including black and white) with a combination of those 3 colors. Thus we can take an image with only 1 or with several bands and display 1 band at a time, thus as a **pan-chromatic** image :numref:`image_visualizations`. We can also use 3 bands and display them as a so- called **true-color composite** (B), which looks like the scene would look to us from space. However, we can essentially assign any of the image bands to one of the 3 colors. A typical combination, called a **false-color composite**, is shown in C, where the information from the  NIR band is displayed in red. Recall that vegetation leads to high DN values in the NIR, hence the high vegetation signal leads to a
 
-    .. _image_visualizations:
-    .. figure:: _static/figures/data_for_disaster_risk_managment/image_visualizations.png
-       :alt: A – panchromatic, B- true-color, C and D – false color composites
-       :figclass: align
+   .. _image_visualizations:
+   .. figure:: _static/figures/data_for_disaster_risk_managment/image_visualizations.png
+      :alt: A – panchromatic, B- true-color, C and D – false color composites
+      :figclass: align
 
-       A – panchromatic, B- true-color, C and D – false color composites
+      A – panchromatic, B- true-color, C and D – false color composites
        
    + **Enhancing an image**. Sometimes, for information to be made more visible, we have to enhance the image. One typical form is **stretching**. Our displays are typically able to display 256 brightness levels for each color, corresponding to 8bit. However, very often the image data only have a limited range, say with DNs between 50 and 150, where are not very bright or very dark features on the ground. To achieve a display with a richer contrast we can stretch the data over the entire available range (0-255). The same concept applies to other data types you will work with, for example elevation. The elevation file for our test area ranges between approximately 900 and 1350m. By default they will be stretched over the available display range. However, we can also stretch a small value range, say 950-1000, to highlight more details. Another common enhancing method is **filtering** :numref:`filtering`. This is a so-called neighborhood analysis, often used to smoothen an image or to highlight edges. In the example the average of all cells shown in grey in the input image is calculated and written to a new file, before the filter template moves to the next pixel (hatched box). Many filter types have been developed, which you will also use in the ILWIS exercises (for example shadow and smoothing filters).
 
     .. _filtering:
     .. figure:: _static/figures/data_for_disaster_risk_managment/filtering.jpg
-       :alt: Input and output result of filtering:  In this case, a smoothing filter was applied.
-       :figclass: align 
+      :alt: Input and output result of filtering:  In this case, a smoothing filter was applied.
+      :figclass: align
 
-       Input and output result of filtering:  In this case, a smoothing filter was applied.
+      Input and output result of filtering:  In this case, a smoothing filter was applied.
 
     + **Other factors influencing our data**. RS data come in many forms, often described by **sensor type**, as well as **spatial, temporal** and **spectral resolution**. Sensors recording reflected sunlight or energy emitted by the earth are called **passive sensors**. However, we also have sensors that emit their own energy, which is reflected by the earth, just like you use a flash on your camera. These are **active sensors**, well-known examples being radar (see Figure 2.10) or laser scanning. The **spatial resolution** describes the size of the ground area represented in a single pixel. This largely depends on the distance between the sensor and the object. While aerial photos may have a resolution of a few cm, data from polar orbiters range between about 50 cm and 1 km per cell. Sensors on geostationary satellites, being very far away, record data at resolutions of a few km. The **temporal** resolution describes the possible frequency of repeat observations. For aerial surveys this can be years. Depending on the type of polar orbiter and sensor, their temporal resolution varies between approx. 1 and 44 days, while geostationary sensors record data up to every 15 minutes. The **spectral** resolution describes how narrow a slice of the EM spectrum a sensor band records.
 
