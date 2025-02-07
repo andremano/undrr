@@ -1,3 +1,4 @@
 sphinxawesome_theme;
-sphinx-design
+sphinx-design;
+sphinxcontrib.quizdown
 

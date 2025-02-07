@@ -22,11 +22,11 @@ sys.path.append(os.path.abspath("./_ext"))
 # Name of the master document.
 master_doc = 'index'
 
-extensions = ["sphinx_design"] #requires pip install sphinx-design (to allow for dropdown admonitions)
+extensions = ['sphinx_design', #requires pip install sphinx-design (to allow for dropdown admonitions)
+              'sphinxcontrib.quizdown'] # requires pip install git+https://github.com/bonartm/sphinxcontrib-quizdown
 
 templates_path = ['_templates']
-exclude_patterns = ['_static/assets/external_links.rst',
-            '_static/assets/data-links.rst']
+exclude_patterns = ['_static/assets/external_links.rst', '_static/assets/data-links.rst']
 
 numfig = True
 

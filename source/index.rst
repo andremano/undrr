@@ -16,6 +16,7 @@ Welcome to undrr's documentation!
    vulnerability_analysis
    risk_assessment
    integration_exercise
+   final_quizz
 
 .. toctree::
    :maxdepth: 2
