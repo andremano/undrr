@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Data for Disaster Risk Managment &#8212; undrr 1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=0c472235" />
-    <link rel="stylesheet" type="text/css" href="_static/pyramid.css?v=310c80ee" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <script src="_static/documentation_options.js?v=29a6c3e3"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -17,34 +17,21 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Hazard Assessment" href="hazard_assessment.html" />
     <link rel="prev" title="Introduction to Disaster Risk Managment" href="introduction.html" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
-<!--[if lte IE 6]>
-<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
-<![endif]-->
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
 
   </head><body>
-
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="hazard_assessment.html" title="Hazard Assessment"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="introduction.html" title="Introduction to Disaster Risk Managment"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">undrr 1 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Data for Disaster Risk Managment</a></li> 
-      </ul>
-    </div>  
+  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <section id="data-for-disaster-risk-managment">
@@ -63,7 +50,7 @@
 </div>
 <section id="what-is-spatial-data">
 <h2>What is Spatial data?<a class="headerlink" href="#what-is-spatial-data" title="Link to this heading">¶</a></h2>
-<p>In geoinformatics, also called geoinformation science, we use the term <strong>spatial data</strong> to describe any type of data that can be linked to a geographic place, usually via coordinates. This means that spatial data has an <strong>unambiguous location</strong> (i.e. it can be associated to a specific location on the Planet). The classic data type is a map, a more modern one could be a satellite image (for an introduction on remote sensing see box). However, we need to consider that our work is largely done digitally on a computer, and that we might want to use data that are actually quite variable in nature. When we think about disasters or risk, we may want to include</p>
+<p>In geoinformatics, also called geoinformation science, we use the term <strong>spatial data</strong> to describe any type of data that can be linked to a geographic place, usually via coordinates. This means that spatial data has an <strong>unambiguous location</strong> (i.e. it can be associated to a specific location on the Planet). The classic data type is a map, a more modern one could be a satellite image (for an introduction on remote sensing see box). However, we need to consider that our work is largely done digitally on a computer, and that we might want to use data that are actually quite variable in nature. When we think about disasters or risk, we may want to include:</p>
 <ul class="simple">
 <li><p>Tabular data or statistics (e.g. on the number of hazard or disaster events of a certain type and in a given time period);</p></li>
 <li><p>Thematic data (e.g. a road or river network, soil types, or digital elevation models [DEMs]);</p></li>
@@ -72,48 +59,60 @@
 <li><p>Images (e.g. aerial photos or satellite images).</p></li>
 <li><p>Point cloud data (LIDAR and laser scans)</p></li>
 </ul>
-<p>However, please not that within those major
-data types there are large variations…</p>
+<p>In the next section we will take a closer look into different types of data.</p>
+</section>
+<section id="main-types-of-data">
+<h2>Main types of data<a class="headerlink" href="#main-types-of-data" title="Link to this heading">¶</a></h2>
+<p>First, it is important to distinguish between <em>data type</em> and <em>data format</em>. The first usually refers to the nature of the data, that is what type of information is the data documenting, while the latter describes what type of computer file are you talking about, including technical specifications.</p>
+<p>Regardless of the type and format, <em>data acquisition</em> is done through the use sensors, surveys and other methods, after which <em>data processing</em> follows in order to distil useful information. We will not do an exhaustive list of data acquisition and processing methods, still, <a class="reference internal" href="#data-type-data-format"><span class="std std-numref">Fig. 1</span></a> provides an overview of the most relevant data types for Disaster Risk Management.</p>
+<figure class="align align-default" id="id1">
+<span id="data-type-data-format"></span><img alt="Overview of the main data types" src="_images/data_type_data_format.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Overview of the main data types</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>For example, you might find statistics presented in a table with either coordinates or grouped per administrative area, or illustrated as a chart or graphic. It can also happen that field photographs are available. Associating those with the other data, and integrating the information you think is useful in those photos with the rest of the analysis, can be challenging. Also consider that many maps or aerial photographs are available only as paper hardcopies. To use them in our work we first have to convert them to a digital format. This can be done by digitizing relevant information, or by scanning and subsequently georeferencing the maps or images.</p>
+<p>Some of the data types mentioned in the diagram of <code class="xref std std-numref docutils literal notranslate"><span class="pre">_data_type_data_format</span></code> deserve a closer look due to their importance for Disaster Risk Management. Among all the data types, those acquired through <strong>remote sensing</strong> deserve especial attention - if you want to dive a bit more into what exactly it is remote sensing, we invite you to expand the <em>What is remote sensing</em> dropdown.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-m-5 sd-fade-in">
 <summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
 <span class="sd-summary-text">What is remote sensing?</span><span class="sd-summary-state-marker sd-summary-chevron-down"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.22 8.22a.749.749 0 0 0 0 1.06l6.25 6.25a.749.749 0 0 0 1.06 0l6.25-6.25a.749.749 0 1 0-1.06-1.06L12 13.939 6.28 8.22a.749.749 0 0 0-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Remote sensing (RS) can be described as the process of making measurements or observations without direct contact with the object being measured or observed. Thus, while in the geoinformatics context satellites often come to mind, even amateur photography is a form of RS. It usually results in images, but also includes other measurements, such as of temperatures or gravity.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Sensors and platforms</strong>. For remote sensing we normally require a <strong>sensor</strong> (i.e. a camera or scanner), but also something that carries the device. Such platforms can be airplanes or satellites, but also other instruments that allow us to place the sensor so that the area or object of interest is exposed, such as balloons or kites. The choice of platform directly affects what we can observe and how. Airplanes and helicopters are flexible in their operation, and by flying relatively low provide good spatial detail. However, such surveys can be expensive and regular imaging of the same area thus costly. Satellites fly on a fixed <strong>orbit</strong>, and are thus less flexible, but can provide data at regular intervals (think of trains on a track). We distinguish between so-called <strong>polar orbiters</strong>, whereby the satellites continuously circle the Earth at an altitude of some 500- 900km, passing over or near the poles. Normally only a relatively narrow strip of Earth underneath the sensor is observed. Modern satellites can also point the sensor sideways for greater flexibility. The other class of satellites is positioned in <strong>geostationary orbit</strong>. This means that the satellite is always directly above a designated place on the equator, moving with the rotating Earth at an altitude of 36,000 km. At that height the sensor can usually observe an entire hemisphere (the side of the Earth facing it), and provide data at any desired frequency. Many weather and communication satellites fall in this category, while most Earth observation satellites are polar orbiters.</p></li>
-<li><p class="sd-card-text"><strong>Collecting information</strong>. The data we obtain depend primarily on the sensor type, just like you might take color or black/white photos with your camera. The secret to taking such different photos lies in the <strong>electromagnetic energy</strong> <a class="reference internal" href="#the-em-spectrum"><span class="std std-numref">Fig. 1</span></a>, which is what our sensors can detect. The most common source of energy is reflected sunlight, which, as you probably know, contains visible light, but also ultraviolet (UV), infrared (IR), thermal and other energy (Figure 2.1). Which part of this continuous energy band we capture depends on the sensor. Your camera might only capture visible light, while others can “see” UV, IR or thermal energy.</p></li>
-</ul>
-<figure class="align-centersession-0-figure0 align-default" id="id1">
-<span id="the-em-spectrum"></span><img alt="The EM spectrum" src="_images/the_em_spectrum.jpg" />
-<figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The EM spectrum</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p class="sd-card-text"><strong>The data</strong>. The data our sensors record typically have the form of a grid, or raster (Figure 2.3). Rows and columns in that grid are populated by cells. These cells contain the information recorded by the sensor. A sensor can also have several <strong>bands</strong>, meaning that different sections of the electromagnetic spectrum are observed <a class="reference internal" href="#grid-structure"><span class="std std-numref">Fig. 2</span></a>. Thus for the area observed we will have an image that contains several bands, and the cell corresponding to a small part on the ground will have one data value for each band. The most important point to understand here is that different materials on the ground reflect energy in a characteristic spectral pattern. For example, vegetation is characterized by high energy in the near infrared (NIR), while for water the energy is very low. In figure 2.2 this would result in high values (digital numbers [DN]) for vegetation and low values for water in the band corresponding to the NIR.</p></li>
+<li><p class="sd-card-text"><strong>Collecting information</strong>. The data we obtain depend primarily on the sensor type, just like you might take color or black/white photos with your camera. The secret to taking such different photos lies in the <strong>electromagnetic energy</strong> <a class="reference internal" href="#the-em-spectrum"><span class="std std-numref">Fig. 2</span></a>, which is what our sensors can detect. The most common source of energy is reflected sunlight, which, as you probably know, contains visible light, but also ultraviolet (UV), infrared (IR), thermal and other energy (Figure 2.1). Which part of this continuous energy band we capture depends on the sensor. Your camera might only capture visible light, while others can “see” UV, IR or thermal energy.</p></li>
 </ul>
 <figure class="align align-default" id="id2">
-<span id="grid-structure"></span><img alt="Grid strucrure of a multi-band image" src="_images/grid_structure.png" />
+<span id="the-em-spectrum"></span><img alt="The EM spectrum" src="_images/the_em_spectrum.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Grid strucrure of a multi-band image</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">The EM spectrum</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Displaying an image</strong>. Once we have our data we can either display them directly on our monitor (if they are already digital), or first scan them. A monitor works with 3 different color channels (blue, green, red), and is able to generate any color (including black and white) with a combination of those 3 colors. Thus we can take an image with only 1 or with several bands and display 1 band at a time, thus as a <strong>pan-chromatic</strong> image <a class="reference internal" href="#image-visualizations"><span class="std std-numref">Fig. 3</span></a>. We can also use 3 bands and display them as a so- called <strong>true-color composite</strong> (B), which looks like the scene would look to us from space. However, we can essentially assign any of the image bands to one of the 3 colors. A typical combination, called a <strong>false-color composite</strong>, is shown in C, where the information from the  NIR band is displayed in red. Recall that vegetation leads to high DN values in the NIR, hence the high vegetation signal leads to a</p></li>
+<li><p class="sd-card-text"><strong>The data</strong>. The data our sensors record typically have the form of a grid, or raster (Figure 2.3). Rows and columns in that grid are populated by cells. These cells contain the information recorded by the sensor. A sensor can also have several <strong>bands</strong>, meaning that different sections of the electromagnetic spectrum are observed <a class="reference internal" href="#grid-structure"><span class="std std-numref">Fig. 3</span></a>. Thus for the area observed we will have an image that contains several bands, and the cell corresponding to a small part on the ground will have one data value for each band. The most important point to understand here is that different materials on the ground reflect energy in a characteristic spectral pattern. For example, vegetation is characterized by high energy in the near infrared (NIR), while for water the energy is very low. In figure 2.2 this would result in high values (digital numbers [DN]) for vegetation and low values for water in the band corresponding to the NIR.</p></li>
 </ul>
 <figure class="align align-default" id="id3">
-<span id="image-visualizations"></span><img alt="A – panchromatic, B- true-color, C and D – false color composites" src="_images/image_visualizations.png" />
+<span id="grid-structure"></span><img alt="Grid structure of a multi-band image" src="_images/grid_structure.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">A – panchromatic, B- true-color, C and D – false color composites</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Grid structure of a multi-band image</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Enhancing an image</strong>. Sometimes, for information to be made more visible, we have to enhance the image. One typical form is <strong>stretching</strong>. Our displays are typically able to display 256 brightness levels for each color, corresponding to 8bit. However, very often the image data only have a limited range, say with DNs between 50 and 150, where are not very bright or very dark features on the ground. To achieve a display with a richer contrast we can stretch the data over the entire available range (0-255). The same concept applies to other data types you will work with, for example elevation. The elevation file for our test area ranges between approximately 900 and 1350m. By default they will be stretched over the available display range. However, we can also stretch a small value range, say 950-1000, to highlight more details. Another common enhancing method is <strong>filtering</strong> <a class="reference internal" href="#filtering"><span class="std std-numref">Fig. 4</span></a>. This is a so-called neighborhood analysis, often used to smoothen an image or to highlight edges. In the example the average of all cells shown in grey in the input image is calculated and written to a new file, before the filter template moves to the next pixel (hatched box). Many filter types have been developed, which you will also use in the ILWIS exercises (for example shadow and smoothing filters).</p></li>
+<li><p class="sd-card-text"><strong>Displaying an image</strong>. Once we have our data we can either display them directly on our monitor (if they are already digital), or first scan them. A monitor works with 3 different color channels (blue, green, red), and is able to generate any color (including black and white) with a combination of those 3 colors. Thus we can take an image with only 1 or with several bands and display 1 band at a time, thus as a <strong>pan-chromatic</strong> image <a class="reference internal" href="#image-visualizations"><span class="std std-numref">Fig. 4</span></a>. We can also use 3 bands and display them as a so- called <strong>true-color composite</strong> (B), which looks like the scene would look to us from space. However, we can essentially assign any of the image bands to one of the 3 colors. A typical combination, called a <strong>false-color composite</strong>, is shown in C, where the information from the  NIR band is displayed in red. Recall that vegetation leads to high DN values in the NIR, hence the high vegetation signal leads to a</p></li>
+</ul>
+<figure class="align align-default" id="id4">
+<span id="image-visualizations"></span><img alt="A – panchromatic, B- true-color, C and D – false color composites" src="_images/image_visualizations.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">A – panchromatic, B- true-color, C and D – false color composites</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Enhancing an image</strong>. Sometimes, for information to be made more visible, we have to enhance the image. One typical form is <strong>stretching</strong>. Our displays are typically able to display 256 brightness levels for each color, corresponding to 8bit. However, very often the image data only have a limited range, say with DNs between 50 and 150, where are not very bright or very dark features on the ground. To achieve a display with a richer contrast we can stretch the data over the entire available range (0-255). The same concept applies to other data types you will work with, for example elevation. The elevation file for our test area ranges between approximately 900 and 1350m. By default they will be stretched over the available display range. However, we can also stretch a small value range, say 950-1000, to highlight more details. Another common enhancing method is <strong>filtering</strong> <a class="reference internal" href="#filtering"><span class="std std-numref">Fig. 5</span></a>. This is a so-called neighborhood analysis, often used to smoothen an image or to highlight edges. In the example the average of all cells shown in grey in the input image is calculated and written to a new file, before the filter template moves to the next pixel (hatched box). Many filter types have been developed, which you will also use in the ILWIS exercises (for example shadow and smoothing filters).</p></li>
 </ul>
 <blockquote>
-<div><figure class="align align-default" id="id4">
+<div><figure class="align align-default" id="id5">
 <span id="filtering"></span><img alt="Input and output result of filtering:  In this case, a smoothing filter was applied." src="_images/filtering.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Input and output result of filtering:  In this case, a smoothing filter was applied.</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Input and output result of filtering:  In this case, a smoothing filter was applied.</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -121,7 +120,21 @@ data types there are large variations…</p>
 </ul>
 </div></blockquote>
 </div>
-</details></section>
+</details><p><strong>Digital Elevation Models (DEM)</strong> are consist of a single band image where the pixel value represents the elevation of that location <code class="xref std std-numref docutils literal notranslate"><span class="pre">DEM</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Savalan</span> <span class="pre">Peak</span> <span class="pre">(Iran)</span> <span class="pre">based</span> <span class="pre">on</span> <span class="pre">SRTM</span> <span class="pre">data</span></code>. They are a fundamental and indispensable dataset for many applications because there are many other informations that can be derived from it, especially when it comes to hydrology. In fact, delineation of catchment areas, streams, flood simulations cannot be done without a DEM as input.</p>
+<figure class="align align-default" id="id6">
+<span id="bala-savalan-peak-iran-dem-srtm"></span><img alt="DEM of the Savalan Peak (Iran) based on SRTM data" src="_images/bala_savalan_peak_%28Iran%29_DEM_srtm.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">DEM of the Savalan Peak (Iran) based on SRTM data</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>DEM are also essential for all sort of landscape analysis for their unique ability to provide an intuitive reading on the main features of an area: where are the mountains, the valleys, the flat areas and so on :numref`dem_animation.gif`:</p>
+<figure class="align align-default" id="id7">
+<span id="dem-animation"></span><img alt="3D visualization of the DEM of the Savalan Peak (Iran) based on SRTM data" src="_images/dem_animation.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">3D visualization of the DEM of the Savalan Peak (Iran) based on SRTM data</span><a class="headerlink" href="#id7" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
 <section id="main-types-of-data-remote-sensing-digital-elevation-meteo-data">
 <h2>Main types of data (Remote Sensing, Digital Elevation, Meteo data)<a class="headerlink" href="#main-types-of-data-remote-sensing-digital-elevation-meteo-data" title="Link to this heading">¶</a></h2>
 </section>
@@ -140,44 +153,51 @@ data types there are large variations…</p>
 </section>
 
 
-            <div class="clearer"></div>
           </div>
+          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Data for Disaster Risk Managment</a><ul>
-<li><a class="reference internal" href="#what-is-spatial-data">What is Spatial data?</a></li>
-<li><a class="reference internal" href="#main-types-of-data-remote-sensing-digital-elevation-meteo-data">Main types of data (Remote Sensing, Digital Elevation, Meteo data)</a></li>
-<li><a class="reference internal" href="#main-sources-of-data">Main sources of data</a></li>
-<li><a class="reference internal" href="#data-sharing-and-dissemination-1-1-5-hour-exercise">Data sharing and dissemination (1-1.5 hour exercise)</a></li>
-<li><a class="reference internal" href="#data-quality-granularity-fitness-for-purpose">Data quality (granularity, fitness for purpose)</a></li>
-<li><a class="reference internal" href="#data-sovereignty-control-licensing">Data sovereignty (control , licensing)</a></li>
+<h1 class="logo"><a href="index.html">undrr</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Sessions</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Disaster Risk Managment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data for Disaster Risk Managment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-spatial-data">What is Spatial data?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main-types-of-data">Main types of data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main-types-of-data-remote-sensing-digital-elevation-meteo-data">Main types of data (Remote Sensing, Digital Elevation, Meteo data)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main-sources-of-data">Main sources of data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-sharing-and-dissemination-1-1-5-hour-exercise">Data sharing and dissemination (1-1.5 hour exercise)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-quality-granularity-fitness-for-purpose">Data quality (granularity, fitness for purpose)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-sovereignty-control-licensing">Data sovereignty (control , licensing)</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="hazard_assessment.html">Hazard Assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vulnerability_analysis.html">Vulnerability Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risk_assessment.html">Risk Assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration_exercise.html">Integration exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="final_quizz.html">Final Quiz</a></li>
 </ul>
 
-  </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="introduction.html"
-                          title="previous chapter">Introduction to Disaster Risk Managment</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="hazard_assessment.html"
-                          title="next chapter">Hazard Assessment</a></p>
-  </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/data_for_disaster_risk_managment.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="introduction.html" title="previous chapter">Introduction to Disaster Risk Managment</a></li>
+      <li>Next: <a href="hazard_assessment.html" title="next chapter">Hazard Assessment</a></li>
+  </ul></li>
+</ul>
+</div>
 <search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
@@ -188,29 +208,32 @@ data types there are large variations…</p>
     </div>
 </search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="hazard_assessment.html" title="Hazard Assessment"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="introduction.html" title="Introduction to Disaster Risk Managment"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">undrr 1 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Data for Disaster Risk Managment</a></li> 
-      </ul>
+    <div class="footer">
+      &#169;University of Twente, 2025.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/data_for_disaster_risk_managment.rst.txt"
+          rel="nofollow">Page source</a>
     </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright University of Twente, 2025.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    </div>
+
+    
+
+    
   </body>
 </html>

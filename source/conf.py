@@ -40,8 +40,8 @@ link_file = ['_static/assets/external_links.rst',
 # html_theme = 'sphinxawesome_theme'
 
 # sphinx default themes
-#html_theme = 'alabaster'
-html_theme = 'pyramid'
+html_theme = 'alabaster'
+#html_theme = 'pyramid'
 
 # Allows storing external links in separated rst
 rst_epilog=""
