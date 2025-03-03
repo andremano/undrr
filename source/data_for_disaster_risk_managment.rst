@@ -1,3 +1,4 @@
+================================
 Data for Disaster Risk Managment
 ================================
 
@@ -12,7 +13,7 @@ Data for Disaster Risk Managment
    + Create a 3D vision yourself using the ILWIS software
 
 What is Spatial data?
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 In geoinformatics, also called geoinformation science, we use the term **spatial data** to describe any type of data that can be linked to a geographic place, usually via coordinates. This means that spatial data has an **unambiguous location** (i.e. it can be associated to a specific location on the Planet). The classic data type is a map, a more modern one could be a satellite image (for an introduction on remote sensing see box). However, we need to consider that our work is largely done digitally on a computer, and that we might want to use data that are actually quite variable in nature. When we think about disasters or risk, we may want to include:
 
@@ -26,7 +27,7 @@ In geoinformatics, also called geoinformation science, we use the term **spatial
 In the next section we will take a closer look into different types of data.
 
 Main types of data
-^^^^^^^^^^^^^^^^^^
+==================
 
 First, it is important to distinguish between *data type* and *data format*. The first usually refers to the nature of the data, that is what type of information is the data documenting, while the latter describes what type of computer file are you talking about, including technical specifications.
 
@@ -41,7 +42,7 @@ Regardless of the type and format, *data acquisition* is done through the use se
 
 For example, you might find statistics presented in a table with either coordinates or grouped per administrative area, or illustrated as a chart or graphic. It can also happen that field photographs are available. Associating those with the other data, and integrating the information you think is useful in those photos with the rest of the analysis, can be challenging. Also consider that many maps or aerial photographs are available only as paper hardcopies. To use them in our work we first have to convert them to a digital format. This can be done by digitizing relevant information, or by scanning and subsequently georeferencing the maps or images.
 
-Some of the data types mentioned in the diagram of :numref:`_data_type_data_format` deserve a closer look due to their importance for Disaster Risk Management. Among all the data types, those acquired through **remote sensing** deserve especial attention - if you want to dive a bit more into what exactly it is remote sensing, we invite you to expand the *What is remote sensing* dropdown.
+Some of the data types mentioned in the diagram of :numref:`data_type_data_format` deserve a closer look due to their importance for Disaster Risk Management. Among all the data types, those acquired through **remote sensing** deserve especial attention - if you want to dive a bit more into what exactly it is remote sensing, we invite you to expand the *What is remote sensing* dropdown.
 
 .. dropdown:: What is remote sensing?
    :animate: fade-in
@@ -62,7 +63,7 @@ Some of the data types mentioned in the diagram of :numref:`_data_type_data_form
 
       The EM spectrum
 
-   + **The data**. The data our sensors record typically have the form of a grid, or raster (Figure 2.3). Rows and columns in that grid are populated by cells. These cells contain the information recorded by the sensor. A sensor can also have several **bands**, meaning that different sections of the electromagnetic spectrum are observed :numref:`grid_structure`. Thus for the area observed we will have an image that contains several bands, and the cell corresponding to a small part on the ground will have one data value for each band. The most important point to understand here is that different materials on the ground reflect energy in a characteristic spectral pattern. For example, vegetation is characterized by high energy in the near infrared (NIR), while for water the energy is very low. In figure 2.2 this would result in high values (digital numbers [DN]) for vegetation and low values for water in the band corresponding to the NIR.
+   + **The data**. The data our sensors record typically have the form of a grid, or raster. Rows and columns in that grid are populated by cells. These cells contain the information recorded by the sensor. A sensor can also have several **bands**, meaning that different sections of the electromagnetic spectrum are observed :numref:`grid_structure`. Thus for the area observed we will have an image that contains several bands, and the cell corresponding to a small part on the ground will have one data value for each band. The most important point to understand here is that different materials on the ground reflect energy in a characteristic spectral pattern. For example, vegetation is characterized by high energy in the near infrared (NIR), while for water the energy is very low. In figure 2.2 this would result in high values (digital numbers [DN]) for vegetation and low values for water in the band corresponding to the NIR.
 
    .. _grid_structure:
    .. figure:: _static/figures/data_for_disaster_risk_managment/grid_structure.png
@@ -91,8 +92,10 @@ Some of the data types mentioned in the diagram of :numref:`_data_type_data_form
 
     + **Other factors influencing our data**. RS data come in many forms, often described by **sensor type**, as well as **spatial, temporal** and **spectral resolution**. Sensors recording reflected sunlight or energy emitted by the earth are called **passive sensors**. However, we also have sensors that emit their own energy, which is reflected by the earth, just like you use a flash on your camera. These are **active sensors**, well-known examples being radar (see Figure 2.10) or laser scanning. The **spatial resolution** describes the size of the ground area represented in a single pixel. This largely depends on the distance between the sensor and the object. While aerial photos may have a resolution of a few cm, data from polar orbiters range between about 50 cm and 1 km per cell. Sensors on geostationary satellites, being very far away, record data at resolutions of a few km. The **temporal** resolution describes the possible frequency of repeat observations. For aerial surveys this can be years. Depending on the type of polar orbiter and sensor, their temporal resolution varies between approx. 1 and 44 days, while geostationary sensors record data up to every 15 minutes. The **spectral** resolution describes how narrow a slice of the EM spectrum a sensor band records.
 
+Digital Elevation Models (DEM)
+******************************
 
-**Digital Elevation Models (DEM)** are consist of a single band image where the pixel value represents the elevation of that location :numref:`DEM of the Savalan Peak (Iran) based on SRTM data`. They are a fundamental and indispensable dataset for many applications because there are many other informations that can be derived from it, especially when it comes to hydrology. In fact, delineation of catchment areas, streams, flood simulations cannot be done without a DEM as input.
+**Digital Elevation Models (DEM)**  consist of a single band image where the pixel value represents the elevation of that location :numref:`bala_savalan_peak_(Iran)_DEM_srtm`. They are a fundamental and indispensable dataset for many applications because there are many other informations that can be derived from it, especially when it comes to hydrology. In fact, delineation of catchment areas, streams, flood simulations cannot be done without a DEM as input.
 
 
 .. _bala_savalan_peak_(Iran)_DEM_srtm:
@@ -102,7 +105,7 @@ Some of the data types mentioned in the diagram of :numref:`_data_type_data_form
 
       DEM of the Savalan Peak (Iran) based on SRTM data
 
-DEM are also essential for all sort of landscape analysis for their unique ability to provide an intuitive reading on the main features of an area: where are the mountains, the valleys, the flat areas and so on :numref`dem_animation.gif`:
+DEM are also essential for all sort of landscape analysis for their unique ability to provide an intuitive reading on the main features of an area: where are the mountains, the valleys, the flat areas and so on :numref:`dem_animation`:
 
 .. _dem_animation:
 .. figure:: _static/figures/data_for_disaster_risk_managment/dem_animation.gif
@@ -110,6 +113,51 @@ DEM are also essential for all sort of landscape analysis for their unique abili
       :figclass: align
 
       3D visualization of the DEM of the Savalan Peak (Iran) based on SRTM data
+
+Land Cover Maps
+***************
+
+Land Cover maps are a form of thematic data where the map is made of mutually exclusive categories that are defined according to the prevalent land cover.
+For example, a land cover map with four categories could include *water*, *green area*, *dry area*, and *urbanized*. Land cover maps are often confused with land use maps, and the two terms are mistakenly used interchangeably. Land cover refers to the actual physical surface of an area—what dominates the landscape :numref:land_cover_enschede.
+In contrast, land use maps document how people utilize the land. For instance, green area describes the land cover, but park is a land use category, not a cover type.
+
+.. _land_cover_enschede:
+.. figure:: _static/figures/data_for_disaster_risk_managment/land_cover_enschede.png
+      :alt: Land cover map of Enschede (The Netherlands) based on Sentinel 2 imagery (2016)
+      :figclass: align
+
+      Land cover map of Enschede (The Netherlands) based on Sentinel 2 imagery (2016)
+
+Land cover maps are typically produced by classifying multi-spectral satellite imagery using a range of machine learning and supervised classification techniques. These methods aim to cluster pixels based on radiometric similarity. The accuracy of the classification is then assessed by evaluating whether the assigned categories correctly match the actual land cover.
+The more localized a land cover map is, the more accurate and representative the land cover classes tend to be. However, there exists land cover maps at global scale that might be useful even when used for large scale mapping. See for example `Worldwide land cover mapping <Worldwide land cover mapping_>`_
+
+Land Cover Indices
+******************
+
+Land Cover Indices are derived from remotely sensed data, primarily multi-spectral satellite imagery, and are expressed on a numerical scale, typically ranging from -1 to 1. Higher values indicate a greater likelihood that the physical characteristic measured by the index is present. These indices are widely used in environmental monitoring, agriculture, urban planning and may also be very useful for disaster risk managing. Indices allow us to analyze vegetation, water bodies, soil, and built-up areas.
+A few of these indices are very commonly used:
+
+* Normalized Difference Vegetation Index (NDVI) – Measures vegetation health and density. Defined as:
+
+.. math::
+
+   NDVI = \frac{(NIR - RED)}{(NIR + RED)}
+
+* Normalized Difference Water Index (NDWI) – Indicates the presence of water on the surface (water bodies).
+
+.. math::
+
+   NDWI = \frac{(GREEN - NIR)}{(GREEN + NIR)}
+
+Representing physical characteristics as an indice is a very useful indicator that also allows for a fast and intuitive assessment of complex phenomenon :numref:`indeces_ndvi_ndwi`. There are many indices built on top of remote sensed imagery, you can check this page for a `list of indices <list of indices_>`_
+
+.. _indeces_ndvi_ndwi:
+.. figure:: _static/figures/data_for_disaster_risk_managment/indeces_ndvi_ndwi.png
+      :alt: NDVI (A) and NDWI (B) indeces for the Sistan Basin, in Iran, as of January 2005.
+      :figclass: align
+
+      NDVI (A) and NDWI (B) indeces for the Sistan Basin, in Iran, as of January 2005.
+
 
 Main types of data (Remote Sensing, Digital Elevation, Meteo data)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

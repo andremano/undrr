@@ -22,7 +22,8 @@ sys.path.append(os.path.abspath("./_ext"))
 # Name of the master document.
 master_doc = 'index'
 
-extensions = ['sphinx_design'] #requires pip install sphinx-design (to allow for dropdown admonitions)
+extensions = ['sphinx_design', #requires pip install sphinx-design (to allow for dropdown admonitions)
+              'docxbuilder']   #requires pip install docxbuilder (to allow making docx files)
 
 templates_path = ['_templates']
 exclude_patterns = ['_static/assets/external_links.rst', '_static/assets/data-links.rst']
@@ -36,11 +37,11 @@ link_file = ['_static/assets/external_links.rst',
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-# html_permalinks_icon = '<span>#</span>'
-# html_theme = 'sphinxawesome_theme'
+html_permalinks_icon = '<span>#</span>'
+html_theme = 'sphinxawesome_theme'
 
 # sphinx default themes
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
 #html_theme = 'pyramid'
 
 # Allows storing external links in separated rst
