@@ -108,11 +108,10 @@
 <p>Session objectives</p>
 <p>After this session you should be able to:</p>
 <ul class="simple">
-<li><p>Understand that a vast range of spatial data exist that may be useful for risk assessment Understand that different hazard types call for data with different spatial, spectral and temporal characteristics, and what we have to consider when trying to decide what to use Evaluate the different spatial, spectral and temporal characteristics of different data types Evaluate additional constraints that may influence which data set(s) we use in our risk assessment</p></li>
-<li><p>Know where to search for and obtain some key thematic and image data types</p></li>
-<li><p>Understand the basic concepts of 3D vision</p></li>
-<li><p>List the most used remote sensing systems to create 3D for hazard studies</p></li>
-<li><p>Create a 3D vision yourself using the ILWIS software</p></li>
+<li><p>Recognize the variety of spatial data available for risk assessment and how different hazards require specific spatial, spectral, and temporal characteristics. Assess these characteristics across data types while considering additional constraints that impact data selection;</p></li>
+<li><p>Where to search for and obtain some key datasets;</p></li>
+<li><p>Evaluate the quality of a dataset with regards to its suitability for a purpose;</p></li>
+<li><p>Understand what data sovereignty is and why it is important.</p></li>
 </ul>
 </div>
 <section id="what-is-spatial-data">
@@ -238,11 +237,54 @@ A few of these indices are very commonly used:</p>
 <p><span class="caption-number">Fig. 9 </span><span class="caption-text">NDVI (A) and NDWI (B) indeces for the Sistan Basin, in Iran, as of January 2005.</span><a class="headerlink" href="#id9" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
-<section id="main-types-of-data-remote-sensing-digital-elevation-meteo-data">
-<h5>Main types of data (Remote Sensing, Digital Elevation, Meteo data)<a class="headerlink" href="#main-types-of-data-remote-sensing-digital-elevation-meteo-data" title="Link to this heading"><span>#</span></a></h5>
 </section>
-<section id="main-sources-of-data">
-<h5>Main sources of data<a class="headerlink" href="#main-sources-of-data" title="Link to this heading"><span>#</span></a></h5>
+<section id="metereological-data">
+<h4>Metereological data<a class="headerlink" href="#metereological-data" title="Link to this heading"><span>#</span></a></h4>
+</section>
+<section id="aerial-and-drone-photography">
+<h4>Aerial and drone photography<a class="headerlink" href="#aerial-and-drone-photography" title="Link to this heading"><span>#</span></a></h4>
+<p>Despite the increasing availability and quality of satellite imagery, mounting a photographic camera on an aerial vehicle is widely used and covers use cases for which satellite imagery is not the best option. In simple terms, if small object recognition is a requirement, then we need imagey that is suitable for small scale mapping.
+The biggest difference between satellite and aerial and drone imagery is the spatial resolution that is higher in the latter <a class="reference internal" href="#satellite-arerial-drone-imagery"><span class="std std-numref">Fig. 10</span></a>. Commercial satellites offer spacial resolutions, for True colour of up to 3m while with aerial and drone photography we can have imagery with centimetric spatial resolution.</p>
+<figure class="align align-default" id="id10">
+<span id="satellite-arerial-drone-imagery"></span><img alt="Imagery documenting Caldas da Rainha, Portugal: (A) Sentinel-2 satellite imagery with a spatial resolution of 10m; (B) a highlighted section of the city captured in aerial photography with a resolution of 10cm; (C) the same highlighted section using drone imagery at 2cm resolution. Notice how the detail increases." src="_images/satellite_arerial_drone_imagery.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Imagery documenting Caldas da Rainha, Portugal: (A) Sentinel-2 satellite imagery with a spatial resolution of 10m; (B) a highlighted section of the city captured in aerial photography with a resolution of 10cm; (C) the same highlighted section using drone imagery at 2cm resolution. Notice how the detail increases.</span><a class="headerlink" href="#id10" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+<p>Aerial photography is usually comissioned by national agencies to obtain a detailed based map for the whole country or a particular region, while drone imagery, due to the logistic challenge of scaling it up to large areas, is usually applied to cover localized areas like a development plan or a particular part of a city.</p>
+</section>
+<section id="topographic-maps">
+<h4>Topographic maps<a class="headerlink" href="#topographic-maps" title="Link to this heading"><span>#</span></a></h4>
+<p>Topographic maps are the result of surveys using traditional optical survey methods like total stations and theodolites, but nowadays, these surveys are typically assisted by GPS measurements and can be complemented with other aerial imagery or even LiDAR and other sensors.
+Topographic maps include two big groups of information: man-made structures like roads and buildings and natural features with a great emphasis on altitude measurements that are on the base of terain representations and the deliniation of landscape features like ridges, valleys and water bodies <a class="reference internal" href="#topographic-map-example"><span class="std std-numref">Fig. 11</span></a></p>
+<figure class="align align-default" id="id11">
+<span id="topographic-map-example"></span><img alt='Detail of a topographic map the Tehachapi Mountains (California, USA). Section of "The National Map" by USGS' src="_images/topographic_map_example.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Detail of a topographic map the Tehachapi Mountains (California, USA). Section of “The National Map” by USGS</span><a class="headerlink" href="#id11" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+<p>Modern topographic maps are actually a composition of several distinct datasets that were acquired using a myriad of different techniques, however in many countries old paper based topographic maps continue to be a precious source of information.
+When a map is made of a a subset of of topographic elements in order to document a specific theme, we call it a ‘thematic map’. Common thematic maps include natural features like geology <code class="xref std std-numref docutils literal notranslate"><span class="pre">geology_map`or</span> <span class="pre">man-made</span> <span class="pre">elements</span> <span class="pre">like</span> <span class="pre">communications</span> <span class="pre">and</span> <span class="pre">cadastral</span> <span class="pre">maps</span> <span class="pre">(or</span> <span class="pre">other</span> <span class="pre">delimitations)</span> <span class="pre">:numref:`cadastral_map_dorset</span></code>.</p>
+<figure class="align align-default" id="id12">
+<span id="geology-map"></span><img alt="Thematic map of the geology from the peninsula of Peniche (Portugal)" src="_images/geology_map.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Thematic map of the geology from the peninsula of Peniche (Portugal)</span><a class="headerlink" href="#id12" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+<figure class="align align-default" id="id13">
+<span id="cadastral-map-dorset"></span><img alt="Extract" src="_images/cadastral_map_dorset.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Thematic map of the land parcels and roads from Dorset (Tasmania)</span><a class="headerlink" href="#id13" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="crowd-source-data">
+<h4>Crowd source data<a class="headerlink" href="#crowd-source-data" title="Link to this heading"><span>#</span></a></h4>
+</section>
+<section id="census-and-statistica-data">
+<h4>Census and Statistica data<a class="headerlink" href="#census-and-statistica-data" title="Link to this heading"><span>#</span></a></h4>
+<section id="sources-of-data-acess-and-dissemination">
+<h5>Sources of data, acess and dissemination<a class="headerlink" href="#sources-of-data-acess-and-dissemination" title="Link to this heading"><span>#</span></a></h5>
 </section>
 <section id="data-sharing-and-dissemination-1-1-5-hour-exercise">
 <h5>Data sharing and dissemination (1-1.5 hour exercise)<a class="headerlink" href="#data-sharing-and-dissemination-1-1-5-hour-exercise" title="Link to this heading"><span>#</span></a></h5>
@@ -264,9 +306,13 @@ A few of these indices are very commonly used:</p>
 <li><a :data-current="activeSection === '#main-types-of-data'" class="reference internal" href="#main-types-of-data">Main types of data</a><ul>
 <li><a :data-current="activeSection === '#digital-elevation-models-dem'" class="reference internal" href="#digital-elevation-models-dem">Digital Elevation Models (DEM)</a></li>
 <li><a :data-current="activeSection === '#land-cover-maps'" class="reference internal" href="#land-cover-maps">Land Cover Maps</a></li>
-<li><a :data-current="activeSection === '#land-cover-indices'" class="reference internal" href="#land-cover-indices">Land Cover Indices</a><ul>
-<li><a :data-current="activeSection === '#main-types-of-data-remote-sensing-digital-elevation-meteo-data'" class="reference internal" href="#main-types-of-data-remote-sensing-digital-elevation-meteo-data">Main types of data (Remote Sensing, Digital Elevation, Meteo data)</a></li>
-<li><a :data-current="activeSection === '#main-sources-of-data'" class="reference internal" href="#main-sources-of-data">Main sources of data</a></li>
+<li><a :data-current="activeSection === '#land-cover-indices'" class="reference internal" href="#land-cover-indices">Land Cover Indices</a></li>
+<li><a :data-current="activeSection === '#metereological-data'" class="reference internal" href="#metereological-data">Metereological data</a></li>
+<li><a :data-current="activeSection === '#aerial-and-drone-photography'" class="reference internal" href="#aerial-and-drone-photography">Aerial and drone photography</a></li>
+<li><a :data-current="activeSection === '#topographic-maps'" class="reference internal" href="#topographic-maps">Topographic maps</a></li>
+<li><a :data-current="activeSection === '#crowd-source-data'" class="reference internal" href="#crowd-source-data">Crowd source data</a></li>
+<li><a :data-current="activeSection === '#census-and-statistica-data'" class="reference internal" href="#census-and-statistica-data">Census and Statistica data</a><ul>
+<li><a :data-current="activeSection === '#sources-of-data-acess-and-dissemination'" class="reference internal" href="#sources-of-data-acess-and-dissemination">Sources of data, acess and dissemination</a></li>
 <li><a :data-current="activeSection === '#data-sharing-and-dissemination-1-1-5-hour-exercise'" class="reference internal" href="#data-sharing-and-dissemination-1-1-5-hour-exercise">Data sharing and dissemination (1-1.5 hour exercise)</a></li>
 <li><a :data-current="activeSection === '#data-quality-granularity-fitness-for-purpose'" class="reference internal" href="#data-quality-granularity-fitness-for-purpose">Data quality (granularity, fitness for purpose)</a></li>
 <li><a :data-current="activeSection === '#data-sovereignty-control-licensing'" class="reference internal" href="#data-sovereignty-control-licensing">Data sovereignty (control , licensing)</a></li>

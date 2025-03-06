@@ -6,11 +6,10 @@ Data for Disaster Risk Managment
 
    After this session you should be able to:
 
-   + Understand that a vast range of spatial data exist that may be useful for risk assessment Understand that different hazard types call for data with different spatial, spectral and temporal characteristics, and what we have to consider when trying to decide what to use Evaluate the different spatial, spectral and temporal characteristics of different data types Evaluate additional constraints that may influence which data set(s) we use in our risk assessment
-   + Know where to search for and obtain some key thematic and image data types
-   + Understand the basic concepts of 3D vision
-   + List the most used remote sensing systems to create 3D for hazard studies
-   + Create a 3D vision yourself using the ILWIS software
+   + Recognize the variety of spatial data available for risk assessment and how different hazards require specific spatial, spectral, and temporal characteristics. Assess these characteristics across data types while considering additional constraints that impact data selection;
+   + Where to search for and obtain some key datasets;
+   + Evaluate the quality of a dataset with regards to its suitability for a purpose;
+   + Understand what data sovereignty is and why it is important.
 
 What is Spatial data?
 ---------------------
@@ -159,14 +158,62 @@ Representing physical characteristics as an indice is a very useful indicator th
       NDVI (A) and NDWI (B) indeces for the Sistan Basin, in Iran, as of January 2005.
 
 
-Main types of data (Remote Sensing, Digital Elevation, Meteo data)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Metereological data
+*******************
 
+Aerial and drone photography
+****************************
 
+Despite the increasing availability and quality of satellite imagery, mounting a photographic camera on an aerial vehicle is widely used and covers use cases for which satellite imagery is not the best option. In simple terms, if small object recognition is a requirement, then we need imagey that is suitable for small scale mapping.
+The biggest difference between satellite and aerial and drone imagery is the spatial resolution that is higher in the latter :numref:`satellite_arerial_drone_imagery`. Commercial satellites offer spacial resolutions, for True colour of up to 3m while with aerial and drone photography we can have imagery with centimetric spatial resolution.
 
+.. _satellite_arerial_drone_imagery:
+.. figure:: _static/figures/data_for_disaster_risk_managment/satellite_arerial_drone_imagery.png
+      :alt: Imagery documenting Caldas da Rainha, Portugal: (A) Sentinel-2 satellite imagery with a spatial resolution of 10m; (B) a highlighted section of the city captured in aerial photography with a resolution of 10cm; (C) the same highlighted section using drone imagery at 2cm resolution. Notice how the detail increases.
+      :figclass: align
 
-Main sources of data
-^^^^^^^^^^^^^^^^^^^^
+      Imagery documenting Caldas da Rainha, Portugal: (A) Sentinel-2 satellite imagery with a spatial resolution of 10m; (B) a highlighted section of the city captured in aerial photography with a resolution of 10cm; (C) the same highlighted section using drone imagery at 2cm resolution. Notice how the detail increases.
+
+Aerial photography is usually comissioned by national agencies to obtain a detailed based map for the whole country or a particular region, while drone imagery, due to the logistic challenge of scaling it up to large areas, is usually applied to cover localized areas like a development plan or a particular part of a city.
+
+Topographic maps
+****************
+
+Topographic maps are the result of surveys using traditional optical survey methods like total stations and theodolites, but nowadays, these surveys are typically assisted by GPS measurements and can be complemented with other aerial imagery or even LiDAR and other sensors.
+Topographic maps include two big groups of information: man-made structures like roads and buildings and natural features with a great emphasis on altitude measurements that are on the base of terain representations and the deliniation of landscape features like ridges, valleys and water bodies :numref:`topographic_map_example`
+
+.. _topographic_map_example:
+.. figure:: _static/figures/data_for_disaster_risk_managment/topographic_map_example.png
+      :alt: Detail of a topographic map the Tehachapi Mountains (California, USA). Section of "The National Map" by USGS
+      :figclass: align
+
+      Detail of a topographic map the Tehachapi Mountains (California, USA). Section of "The National Map" by USGS
+
+Modern topographic maps are actually a composition of several distinct datasets that were acquired using a myriad of different techniques, however in many countries old paper based topographic maps continue to be a precious source of information.
+When a map is made of a a subset of of topographic elements in order to document a specific theme, we call it a 'thematic map'. Common thematic maps include natural features like geology :numref:`geology_map`or man-made elements like communications and cadastral maps (or other delimitations) :numref:`cadastral_map_dorset`.
+
+.. _geology_map:
+.. figure:: _static/figures/data_for_disaster_risk_managment/geology_map.png
+      :alt: Thematic map of the geology from the peninsula of Peniche (Portugal)
+      :figclass: align
+
+      Thematic map of the geology from the peninsula of Peniche (Portugal)
+
+.. _cadastral_map_dorset:
+.. figure:: _static/figures/data_for_disaster_risk_managment/cadastral_map_dorset.png
+      :alt: Extract
+      :figclass: align
+
+      Thematic map of the land parcels and roads from Dorset (Tasmania)
+
+Crowd source data
+*****************
+
+Census and Statistica data
+**************************
+
+Sources of data, acess and dissemination
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Data sharing and dissemination (1-1.5 hour exercise)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
