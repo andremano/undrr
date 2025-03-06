@@ -1,4 +1,4 @@
-sphinxawesome_theme;
-sphinx-design;
+sphinxawesome_theme
+sphinx-design
 docxbuilder
 
