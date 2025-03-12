@@ -264,7 +264,7 @@ Topographic maps include two big groups of information: man-made structures like
 </figcaption>
 </figure>
 <p>Modern topographic maps are actually a composition of several distinct datasets that were acquired using a myriad of different techniques, however in many countries old paper based topographic maps continue to be a precious source of information.
-When a map is made of a a subset of of topographic elements in order to document a specific theme, we call it a ‘thematic map’. Common thematic maps include natural features like geology <code class="xref std std-numref docutils literal notranslate"><span class="pre">geology_map`or</span> <span class="pre">man-made</span> <span class="pre">elements</span> <span class="pre">like</span> <span class="pre">communications</span> <span class="pre">and</span> <span class="pre">cadastral</span> <span class="pre">maps</span> <span class="pre">(or</span> <span class="pre">other</span> <span class="pre">delimitations)</span> <span class="pre">:numref:`cadastral_map_dorset</span></code>.</p>
+When a map is made of a a subset of of topographic elements in order to document a specific theme, we call it a ‘thematic map’. Common thematic maps include natural features like geology <a class="reference internal" href="#geology-map"><span class="std std-numref">Fig. 12</span></a> or man-made elements like communications and cadastral maps (or other delimitations) <a class="reference internal" href="#cadastral-map-dorset"><span class="std std-numref">Fig. 13</span></a>.</p>
 <figure class="align align-default" id="id12">
 <span id="geology-map"></span><img alt="Thematic map of the geology from the peninsula of Peniche (Portugal)" src="_images/geology_map.png"/>
 <figcaption>
@@ -272,11 +272,47 @@ When a map is made of a a subset of of topographic elements in order to document
 </figcaption>
 </figure>
 <figure class="align align-default" id="id13">
-<span id="cadastral-map-dorset"></span><img alt="Extract" src="_images/cadastral_map_dorset.png"/>
+<span id="cadastral-map-dorset"></span><img alt="Thematic map of the land parcels and roads from Dorset (Tasmania)" src="_images/cadastral_map_dorset.png"/>
 <figcaption>
 <p><span class="caption-number">Fig. 13 </span><span class="caption-text">Thematic map of the land parcels and roads from Dorset (Tasmania)</span><a class="headerlink" href="#id13" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
+</section>
+<section id="lidar-data">
+<h4>LiDAR data<a class="headerlink" href="#lidar-data" title="Link to this heading"><span>#</span></a></h4>
+<p>LiDAR or <em>Light Detection and Ranging</em> is an active remote sensing system that can be used to generate very high resolution (in other words, detailed) Digital Elevation and Digital Surface Models <a class="reference internal" href="#lidar"><span class="std std-numref">Fig. 15</span></a></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-m-5 sd-fade-in">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-text">Difference between DEM and DSM</span><span class="sd-summary-state-marker sd-summary-chevron-down"><svg aria-hidden="true" class="sd-octicon sd-octicon-chevron-down" height="1.5em" version="1.1" viewbox="0 0 24 24" width="1.5em"><path d="M5.22 8.22a.749.749 0 0 0 0 1.06l6.25 6.25a.749.749 0 0 0 1.06 0l6.25-6.25a.749.749 0 1 0-1.06-1.06L12 13.939 6.28 8.22a.749.749 0 0 0-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Although DEM (Digital Elevation Models) and DSM (Digital Surface Models) are often mentioned interchangeably, they have slightly different meaning:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>DEM</strong> Is a representation of the topography without any other features like constructions or trees. It represents the height of ‘bare earth’ only <a class="reference internal" href="#dem-vs-dsm"><span class="std std-numref">Fig. 14</span></a>.</p></li>
+<li><p class="sd-card-text"><strong>DSM</strong> In turn, is a representation of the topography that includes features that are on the ‘bare soil’ like houses and vegetation <a class="reference internal" href="#dem-vs-dsm"><span class="std std-numref">Fig. 14</span></a>.</p></li>
+</ul>
+<figure class="align align-default" id="id14">
+<span id="dem-vs-dsm"></span><img alt="Same area as a DEM (A) and DSM (B). Note how the DSM is representing the top of the trees and that reflects in the elevation values." src="_images/dem_vs_dsm.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Same area as a DEM (A) and DSM (B). Note how the DSM is representing the top of the trees and that reflects in the elevation values</span><a class="headerlink" href="#id14" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+</div>
+</details><figure class="align align-default" id="id15">
+<span id="lidar"></span><img alt="DSM of the Neštich hillfort above Svätý Jur (Slovenia) made from LiDAR data (2016)" src="_images/lidar.gif"/>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">DSM of the Neštich hillfort above Svätý Jur (Slovenia) made from LiDAR data (2016)</span><a class="headerlink" href="#id15" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+<p>LiDAR data acquisition is performed using a laser beam, typically mounted on an aircraft. The laser “fires” pulses toward the Earth’s surface, with point densities typically ranging from 1 to 100 points per square meter. Higher point densities provide more detailed data but also require more intensive processing.</p>
+<p>The collected data forms a point cloud consisting of millions of points, each represented by XYZ coordinates. These coordinates are determined by measuring the time it takes for the laser beam to reach an object and reflect back to the sensor.</p>
+<p>One particularly interesting application of high-density point clouds is their ability to penetrate vegetation and capture multiple layers of information. This allows for the identification of different levels, such as bare soil, intermediate vegetation, and the top of the tree canopy <a class="reference internal" href="#lidar-flying"><span class="std std-numref">Fig. 16</span></a>.</p>
+<blockquote>
+<div><figure class="align align-default" id="id16">
+<span id="lidar-flying"></span><img alt="Animation illustrating the level of detail collected with a LiDAR sensor mounted on an airplane." src="_images/lidar_flying.gif"/>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Animation illustrating the level of detail collected with a LiDAR sensor mounted on an airplane</span><a class="headerlink" href="#id16" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
 </section>
 <section id="crowd-source-data">
 <h4>Crowd source data<a class="headerlink" href="#crowd-source-data" title="Link to this heading"><span>#</span></a></h4>
@@ -310,6 +346,7 @@ When a map is made of a a subset of of topographic elements in order to document
 <li><a :data-current="activeSection === '#metereological-data'" class="reference internal" href="#metereological-data">Metereological data</a></li>
 <li><a :data-current="activeSection === '#aerial-and-drone-photography'" class="reference internal" href="#aerial-and-drone-photography">Aerial and drone photography</a></li>
 <li><a :data-current="activeSection === '#topographic-maps'" class="reference internal" href="#topographic-maps">Topographic maps</a></li>
+<li><a :data-current="activeSection === '#lidar-data'" class="reference internal" href="#lidar-data">LiDAR data</a></li>
 <li><a :data-current="activeSection === '#crowd-source-data'" class="reference internal" href="#crowd-source-data">Crowd source data</a></li>
 <li><a :data-current="activeSection === '#census-and-statistica-data'" class="reference internal" href="#census-and-statistica-data">Census and Statistica data</a><ul>
 <li><a :data-current="activeSection === '#sources-of-data-acess-and-dissemination'" class="reference internal" href="#sources-of-data-acess-and-dissemination">Sources of data, acess and dissemination</a></li>

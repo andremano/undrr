@@ -190,7 +190,7 @@ Topographic maps include two big groups of information: man-made structures like
       Detail of a topographic map the Tehachapi Mountains (California, USA). Section of "The National Map" by USGS
 
 Modern topographic maps are actually a composition of several distinct datasets that were acquired using a myriad of different techniques, however in many countries old paper based topographic maps continue to be a precious source of information.
-When a map is made of a a subset of of topographic elements in order to document a specific theme, we call it a 'thematic map'. Common thematic maps include natural features like geology :numref:`geology_map`or man-made elements like communications and cadastral maps (or other delimitations) :numref:`cadastral_map_dorset`.
+When a map is made of a a subset of of topographic elements in order to document a specific theme, we call it a 'thematic map'. Common thematic maps include natural features like geology :numref:`geology_map` or man-made elements like communications and cadastral maps (or other delimitations) :numref:`cadastral_map_dorset`.
 
 .. _geology_map:
 .. figure:: _static/figures/data_for_disaster_risk_managment/geology_map.png
@@ -201,10 +201,56 @@ When a map is made of a a subset of of topographic elements in order to document
 
 .. _cadastral_map_dorset:
 .. figure:: _static/figures/data_for_disaster_risk_managment/cadastral_map_dorset.png
-      :alt: Extract
+      :alt: Thematic map of the land parcels and roads from Dorset (Tasmania)
       :figclass: align
 
       Thematic map of the land parcels and roads from Dorset (Tasmania)
+
+
+LiDAR data
+**********
+
+LiDAR or *Light Detection and Ranging* is an active remote sensing system that can be used to generate very high resolution (in other words, detailed) Digital Elevation and Digital Surface Models :numref:`lidar`
+
+.. dropdown:: Difference between DEM and DSM
+   :animate: fade-in
+   :chevron: down-up
+   :color: info
+   :margin: 5
+
+   Although DEM (Digital Elevation Models) and DSM (Digital Surface Models) are often mentioned interchangeably, they have slightly different meaning:
+
+   + **DEM** Is a representation of the topography without any other features like constructions or trees. It represents the height of 'bare earth' only :numref:`dem_vs_dsm`.
+
+   + **DSM** In turn, is a representation of the topography that includes features that are on the 'bare soil' like houses and vegetation :numref:`dem_vs_dsm`.
+
+   .. _dem_vs_dsm:
+   .. figure:: _static/figures/data_for_disaster_risk_managment/dem_vs_dsm.png
+      :alt: Same area as a DEM (A) and DSM (B). Note how the DSM is representing the top of the trees and that reflects in the elevation values.
+      :figclass: align
+
+      Same area as a DEM (A) and DSM (B). Note how the DSM is representing the top of the trees and that reflects in the elevation values
+
+
+.. _lidar:
+.. figure:: _static/figures/data_for_disaster_risk_managment/lidar.gif
+      :alt: DSM of the Neštich hillfort above Svätý Jur (Slovenia) made from LiDAR data (2016)
+      :figclass: align
+
+      DSM of the Neštich hillfort above Svätý Jur (Slovenia) made from LiDAR data (2016)
+
+LiDAR data acquisition is performed using a laser beam, typically mounted on an aircraft. The laser "fires" pulses toward the Earth's surface, with point densities typically ranging from 1 to 100 points per square meter. Higher point densities provide more detailed data but also require more intensive processing.
+
+The collected data forms a point cloud consisting of millions of points, each represented by XYZ coordinates. These coordinates are determined by measuring the time it takes for the laser beam to reach an object and reflect back to the sensor.
+
+One particularly interesting application of high-density point clouds is their ability to penetrate vegetation and capture multiple layers of information. This allows for the identification of different levels, such as bare soil, intermediate vegetation, and the top of the tree canopy :numref:`lidar_flying`.
+
+   .. _lidar_flying:
+   .. figure:: _static/figures/data_for_disaster_risk_managment/lidar_flying.gif
+      :alt: Animation illustrating the level of detail collected with a LiDAR sensor mounted on an airplane.
+      :figclass: align
+
+      Animation illustrating the level of detail collected with a LiDAR sensor mounted on an airplane
 
 Crowd source data
 *****************
