@@ -105,13 +105,20 @@
 <h1>Data for Disaster Risk Managment<a class="headerlink" href="#data-for-disaster-risk-managment" title="Link to this heading"><span>#</span></a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Session objectives</p>
+<p>Overall objectives</p>
 <p>After this session you should be able to:</p>
 <ul class="simple">
 <li><p>Recognize the variety of spatial data available for risk assessment and how different hazards require specific spatial, spectral, and temporal characteristics. Assess these characteristics across data types while considering additional constraints that impact data selection;</p></li>
-<li><p>Where to search for and obtain some key datasets;</p></li>
-<li><p>Evaluate the quality of a dataset with regards to its suitability for a purpose;</p></li>
 <li><p>Understand what data sovereignty is and why it is important.</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>What will you learn</p>
+<p>In this session you will how learn to:</p>
+<ul class="simple">
+<li><p>Search and obtain key datasets;</p></li>
+<li><p>Evaluate the quality of a dataset with regards to its suitability for a purpose;</p></li>
 </ul>
 </div>
 <section id="what-is-spatial-data">
@@ -130,10 +137,10 @@
 <h3>Main types of data<a class="headerlink" href="#main-types-of-data" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#main-types-of-data'"><span>#</span></a></h3>
 <p>First, it is important to distinguish between <em>data type</em> and <em>data format</em>. The first usually refers to the nature of the data, that is what type of information is the data documenting, while the latter describes what type of computer file are you talking about, including technical specifications.</p>
 <p>Regardless of the type and format, <em>data acquisition</em> is done through the use sensors, surveys and other methods, after which <em>data processing</em> follows in order to distil useful information. We will not do an exhaustive list of data acquisition and processing methods, still, <a class="reference internal" href="#data-type-data-format"><span class="std std-numref">Fig. 1</span></a> provides an overview of the most relevant data types for Disaster Risk Management.</p>
-<figure class="align align-default" id="id1">
+<figure class="align align-default" id="id3">
 <span id="data-type-data-format"></span><img alt="Overview of the main data types" src="_images/data_type_data_format.png"/>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Overview of the main data types</span><a class="headerlink" href="#id1" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Overview of the main data types</span><a class="headerlink" href="#id3" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <p>For example, you might find statistics presented in a table with either coordinates or grouped per administrative area, or illustrated as a chart or graphic. It can also happen that field photographs are available. Associating those with the other data, and integrating the information you think is useful in those photos with the rest of the analysis, can be challenging. Also consider that many maps or aerial photographs are available only as paper hardcopies. To use them in our work we first have to convert them to a digital format. This can be done by digitizing relevant information, or by scanning and subsequently georeferencing the maps or images.</p>
@@ -146,38 +153,38 @@
 <li><p class="sd-card-text"><strong>Sensors and platforms</strong>. For remote sensing we normally require a <strong>sensor</strong> (i.e. a camera or scanner), but also something that carries the device. Such platforms can be airplanes or satellites, but also other instruments that allow us to place the sensor so that the area or object of interest is exposed, such as balloons or kites. The choice of platform directly affects what we can observe and how. Airplanes and helicopters are flexible in their operation, and by flying relatively low provide good spatial detail. However, such surveys can be expensive and regular imaging of the same area thus costly. Satellites fly on a fixed <strong>orbit</strong>, and are thus less flexible, but can provide data at regular intervals (think of trains on a track). We distinguish between so-called <strong>polar orbiters</strong>, whereby the satellites continuously circle the Earth at an altitude of some 500- 900km, passing over or near the poles. Normally only a relatively narrow strip of Earth underneath the sensor is observed. Modern satellites can also point the sensor sideways for greater flexibility. The other class of satellites is positioned in <strong>geostationary orbit</strong>. This means that the satellite is always directly above a designated place on the equator, moving with the rotating Earth at an altitude of 36,000 km. At that height the sensor can usually observe an entire hemisphere (the side of the Earth facing it), and provide data at any desired frequency. Many weather and communication satellites fall in this category, while most Earth observation satellites are polar orbiters.</p></li>
 <li><p class="sd-card-text"><strong>Collecting information</strong>. The data we obtain depend primarily on the sensor type, just like you might take color or black/white photos with your camera. The secret to taking such different photos lies in the <strong>electromagnetic energy</strong> <a class="reference internal" href="#the-em-spectrum"><span class="std std-numref">Fig. 2</span></a>, which is what our sensors can detect. The most common source of energy is reflected sunlight, which, as you probably know, contains visible light, but also ultraviolet (UV), infrared (IR), thermal and other energy (Figure 2.1). Which part of this continuous energy band we capture depends on the sensor. Your camera might only capture visible light, while others can “see” UV, IR or thermal energy.</p></li>
 </ul>
-<figure class="align align-default" id="id2">
+<figure class="align align-default" id="id4">
 <span id="the-em-spectrum"></span><img alt="The EM spectrum" src="_images/the_em_spectrum.jpg"/>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">The EM spectrum</span><a class="headerlink" href="#id2" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">The EM spectrum</span><a class="headerlink" href="#id4" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>The data</strong>. The data our sensors record typically have the form of a grid, or raster. Rows and columns in that grid are populated by cells. These cells contain the information recorded by the sensor. A sensor can also have several <strong>bands</strong>, meaning that different sections of the electromagnetic spectrum are observed <a class="reference internal" href="#grid-structure"><span class="std std-numref">Fig. 3</span></a>. Thus for the area observed we will have an image that contains several bands, and the cell corresponding to a small part on the ground will have one data value for each band. The most important point to understand here is that different materials on the ground reflect energy in a characteristic spectral pattern. For example, vegetation is characterized by high energy in the near infrared (NIR), while for water the energy is very low. In figure 2.2 this would result in high values (digital numbers [DN]) for vegetation and low values for water in the band corresponding to the NIR.</p></li>
 </ul>
-<figure class="align align-default" id="id3">
+<figure class="align align-default" id="id5">
 <span id="grid-structure"></span><img alt="Grid structure of a multi-band image" src="_images/grid_structure.png"/>
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Grid structure of a multi-band image</span><a class="headerlink" href="#id3" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Grid structure of a multi-band image</span><a class="headerlink" href="#id5" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Displaying an image</strong>. Once we have our data we can either display them directly on our monitor (if they are already digital), or first scan them. A monitor works with 3 different color channels (blue, green, red), and is able to generate any color (including black and white) with a combination of those 3 colors. Thus we can take an image with only 1 or with several bands and display 1 band at a time, thus as a <strong>pan-chromatic</strong> image <a class="reference internal" href="#image-visualizations"><span class="std std-numref">Fig. 4</span></a>. We can also use 3 bands and display them as a so- called <strong>true-color composite</strong> (B), which looks like the scene would look to us from space. However, we can essentially assign any of the image bands to one of the 3 colors. A typical combination, called a <strong>false-color composite</strong>, is shown in C, where the information from the  NIR band is displayed in red. Recall that vegetation leads to high DN values in the NIR, hence the high vegetation signal leads to a</p></li>
 </ul>
-<figure class="align align-default" id="id4">
+<figure class="align align-default" id="id6">
 <span id="image-visualizations"></span><img alt="A – panchromatic, B- true-color, C and D – false color composites" src="_images/image_visualizations.png"/>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">A – panchromatic, B- true-color, C and D – false color composites</span><a class="headerlink" href="#id4" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">A – panchromatic, B- true-color, C and D – false color composites</span><a class="headerlink" href="#id6" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Enhancing an image</strong>. Sometimes, for information to be made more visible, we have to enhance the image. One typical form is <strong>stretching</strong>. Our displays are typically able to display 256 brightness levels for each color, corresponding to 8bit. However, very often the image data only have a limited range, say with DNs between 50 and 150, where are not very bright or very dark features on the ground. To achieve a display with a richer contrast we can stretch the data over the entire available range (0-255). The same concept applies to other data types you will work with, for example elevation. The elevation file for our test area ranges between approximately 900 and 1350m. By default they will be stretched over the available display range. However, we can also stretch a small value range, say 950-1000, to highlight more details. Another common enhancing method is <strong>filtering</strong> <a class="reference internal" href="#filtering"><span class="std std-numref">Fig. 5</span></a>. This is a so-called neighborhood analysis, often used to smoothen an image or to highlight edges. In the example the average of all cells shown in grey in the input image is calculated and written to a new file, before the filter template moves to the next pixel (hatched box). Many filter types have been developed, which you will also use in the ILWIS exercises (for example shadow and smoothing filters).</p></li>
 </ul>
 <blockquote>
-<div><figure class="align align-default" id="id5">
+<div><figure class="align align-default" id="id7">
 <span id="filtering"></span><img alt="Input and output result of filtering:  In this case, a smoothing filter was applied." src="_images/filtering.jpg"/>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Input and output result of filtering:  In this case, a smoothing filter was applied.</span><a class="headerlink" href="#id5" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Input and output result of filtering:  In this case, a smoothing filter was applied.</span><a class="headerlink" href="#id7" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -188,17 +195,17 @@
 </details><section id="digital-elevation-models-dem">
 <h4>Digital Elevation Models (DEM)<a class="headerlink" href="#digital-elevation-models-dem" title="Link to this heading"><span>#</span></a></h4>
 <p><strong>Digital Elevation Models (DEM)</strong>  consist of a single band image where the pixel value represents the elevation of that location <a class="reference internal" href="#bala-savalan-peak-iran-dem-srtm"><span class="std std-numref">Fig. 6</span></a>. They are a fundamental and indispensable dataset for many applications because there are many other informations that can be derived from it, especially when it comes to hydrology. In fact, delineation of catchment areas, streams, flood simulations cannot be done without a DEM as input.</p>
-<figure class="align align-default" id="id6">
+<figure class="align align-default" id="id8">
 <span id="bala-savalan-peak-iran-dem-srtm"></span><img alt="DEM of the Savalan Peak (Iran) based on SRTM data" src="_images/bala_savalan_peak_%28Iran%29_DEM_srtm.png"/>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">DEM of the Savalan Peak (Iran) based on SRTM data</span><a class="headerlink" href="#id6" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">DEM of the Savalan Peak (Iran) based on SRTM data</span><a class="headerlink" href="#id8" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <p>DEM are also essential for all sort of landscape analysis for their unique ability to provide an intuitive reading on the main features of an area: where are the mountains, the valleys, the flat areas and so on <a class="reference internal" href="#dem-animation"><span class="std std-numref">Fig. 7</span></a>:</p>
-<figure class="align align-default" id="id7">
+<figure class="align align-default" id="id9">
 <span id="dem-animation"></span><img alt="3D visualization of the DEM of the Savalan Peak (Iran) based on SRTM data" src="_images/dem_animation.gif"/>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">3D visualization of the DEM of the Savalan Peak (Iran) based on SRTM data</span><a class="headerlink" href="#id7" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">3D visualization of the DEM of the Savalan Peak (Iran) based on SRTM data</span><a class="headerlink" href="#id9" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </section>
@@ -207,10 +214,10 @@
 <p>Land Cover maps are a form of thematic data where the map is made of mutually exclusive categories that are defined according to the prevalent land cover.
 For example, a land cover map with four categories could include <em>water</em>, <em>green area</em>, <em>dry area</em>, and <em>urbanized</em>. Land cover maps are often confused with land use maps, and the two terms are mistakenly used interchangeably. Land cover refers to the actual physical surface of an area—what dominates the landscape :numref:land_cover_enschede.
 In contrast, land use maps document how people utilize the land. For instance, green area describes the land cover, but park is a land use category, not a cover type.</p>
-<figure class="align align-default" id="id8">
+<figure class="align align-default" id="id10">
 <span id="land-cover-enschede"></span><img alt="Land cover map of Enschede (The Netherlands) based on Sentinel 2 imagery (2016)" src="_images/land_cover_enschede.png"/>
 <figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Land cover map of Enschede (The Netherlands) based on Sentinel 2 imagery (2016)</span><a class="headerlink" href="#id8" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Land cover map of Enschede (The Netherlands) based on Sentinel 2 imagery (2016)</span><a class="headerlink" href="#id10" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <p>Land cover maps are typically produced by classifying multi-spectral satellite imagery using a range of machine learning and supervised classification techniques. These methods aim to cluster pixels based on radiometric similarity. The accuracy of the classification is then assessed by evaluating whether the assigned categories correctly match the actual land cover.
@@ -231,94 +238,130 @@ A few of these indices are very commonly used:</p>
 <div class="math notranslate nohighlight">
 \[NDWI = \frac{(GREEN - NIR)}{(GREEN + NIR)}\]</div>
 <p>Representing physical characteristics as an indice is a very useful indicator that also allows for a fast and intuitive assessment of complex phenomenon <a class="reference internal" href="#indeces-ndvi-ndwi"><span class="std std-numref">Fig. 9</span></a>. There are many indices built on top of remote sensed imagery, you can check this page for a <a class="reference external" href="https://github.com/awesome-spectral-indices/awesome-spectral-indices">list of indices</a></p>
-<figure class="align align-default" id="id9">
+<figure class="align align-default" id="id11">
 <span id="indeces-ndvi-ndwi"></span><img alt="NDVI (A) and NDWI (B) indeces for the Sistan Basin, in Iran, as of January 2005." src="_images/indeces_ndvi_ndwi.png"/>
 <figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">NDVI (A) and NDWI (B) indeces for the Sistan Basin, in Iran, as of January 2005.</span><a class="headerlink" href="#id9" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">NDVI (A) and NDWI (B) indeces for the Sistan Basin, in Iran, as of January 2005.</span><a class="headerlink" href="#id11" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
-</section>
-<section id="metereological-data">
-<h4>Metereological data<a class="headerlink" href="#metereological-data" title="Link to this heading"><span>#</span></a></h4>
 </section>
 <section id="aerial-and-drone-photography">
 <h4>Aerial and drone photography<a class="headerlink" href="#aerial-and-drone-photography" title="Link to this heading"><span>#</span></a></h4>
 <p>Despite the increasing availability and quality of satellite imagery, mounting a photographic camera on an aerial vehicle is widely used and covers use cases for which satellite imagery is not the best option. In simple terms, if small object recognition is a requirement, then we need imagey that is suitable for small scale mapping.
 The biggest difference between satellite and aerial and drone imagery is the spatial resolution that is higher in the latter <a class="reference internal" href="#satellite-arerial-drone-imagery"><span class="std std-numref">Fig. 10</span></a>. Commercial satellites offer spacial resolutions, for True colour of up to 3m while with aerial and drone photography we can have imagery with centimetric spatial resolution.</p>
-<figure class="align align-default" id="id10">
+<figure class="align align-default" id="id12">
 <span id="satellite-arerial-drone-imagery"></span><img alt="Imagery documenting Caldas da Rainha, Portugal: (A) Sentinel-2 satellite imagery with a spatial resolution of 10m; (B) a highlighted section of the city captured in aerial photography with a resolution of 10cm; (C) the same highlighted section using drone imagery at 2cm resolution. Notice how the detail increases." src="_images/satellite_arerial_drone_imagery.png"/>
 <figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Imagery documenting Caldas da Rainha, Portugal: (A) Sentinel-2 satellite imagery with a spatial resolution of 10m; (B) a highlighted section of the city captured in aerial photography with a resolution of 10cm; (C) the same highlighted section using drone imagery at 2cm resolution. Notice how the detail increases.</span><a class="headerlink" href="#id10" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Imagery documenting Caldas da Rainha, Portugal: (A) Sentinel-2 satellite imagery with a spatial resolution of 10m; (B) a highlighted section of the city captured in aerial photography with a resolution of 10cm; (C) the same highlighted section using drone imagery at 2cm resolution. Notice how the detail increases.</span><a class="headerlink" href="#id12" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <p>Aerial photography is usually comissioned by national agencies to obtain a detailed based map for the whole country or a particular region, while drone imagery, due to the logistic challenge of scaling it up to large areas, is usually applied to cover localized areas like a development plan or a particular part of a city.</p>
 </section>
-<section id="topographic-maps">
-<h4>Topographic maps<a class="headerlink" href="#topographic-maps" title="Link to this heading"><span>#</span></a></h4>
-<p>Topographic maps are the result of surveys using traditional optical survey methods like total stations and theodolites, but nowadays, these surveys are typically assisted by GPS measurements and can be complemented with other aerial imagery or even LiDAR and other sensors.
-Topographic maps include two big groups of information: man-made structures like roads and buildings and natural features with a great emphasis on altitude measurements that are on the base of terain representations and the deliniation of landscape features like ridges, valleys and water bodies <a class="reference internal" href="#topographic-map-example"><span class="std std-numref">Fig. 11</span></a></p>
-<figure class="align align-default" id="id11">
-<span id="topographic-map-example"></span><img alt='Detail of a topographic map the Tehachapi Mountains (California, USA). Section of "The National Map" by USGS' src="_images/topographic_map_example.png"/>
-<figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Detail of a topographic map the Tehachapi Mountains (California, USA). Section of “The National Map” by USGS</span><a class="headerlink" href="#id11" title="Link to this image"><span>#</span></a></p>
-</figcaption>
-</figure>
-<p>Modern topographic maps are actually a composition of several distinct datasets that were acquired using a myriad of different techniques, however in many countries old paper based topographic maps continue to be a precious source of information.
-When a map is made of a a subset of of topographic elements in order to document a specific theme, we call it a ‘thematic map’. Common thematic maps include natural features like geology <a class="reference internal" href="#geology-map"><span class="std std-numref">Fig. 12</span></a> or man-made elements like communications and cadastral maps (or other delimitations) <a class="reference internal" href="#cadastral-map-dorset"><span class="std std-numref">Fig. 13</span></a>.</p>
-<figure class="align align-default" id="id12">
-<span id="geology-map"></span><img alt="Thematic map of the geology from the peninsula of Peniche (Portugal)" src="_images/geology_map.png"/>
-<figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Thematic map of the geology from the peninsula of Peniche (Portugal)</span><a class="headerlink" href="#id12" title="Link to this image"><span>#</span></a></p>
-</figcaption>
-</figure>
-<figure class="align align-default" id="id13">
-<span id="cadastral-map-dorset"></span><img alt="Thematic map of the land parcels and roads from Dorset (Tasmania)" src="_images/cadastral_map_dorset.png"/>
-<figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Thematic map of the land parcels and roads from Dorset (Tasmania)</span><a class="headerlink" href="#id13" title="Link to this image"><span>#</span></a></p>
-</figcaption>
-</figure>
+<section id="radar-data">
+<h4>Radar data<a class="headerlink" href="#radar-data" title="Link to this heading"><span>#</span></a></h4>
 </section>
 <section id="lidar-data">
 <h4>LiDAR data<a class="headerlink" href="#lidar-data" title="Link to this heading"><span>#</span></a></h4>
-<p>LiDAR or <em>Light Detection and Ranging</em> is an active remote sensing system that can be used to generate very high resolution (in other words, detailed) Digital Elevation and Digital Surface Models <a class="reference internal" href="#lidar"><span class="std std-numref">Fig. 15</span></a></p>
+<p>LiDAR or <em>Light Detection and Ranging</em> is an active remote sensing system that can be used to generate very high resolution (in other words, detailed) Digital Elevation and Digital Surface Models <a class="reference internal" href="#lidar"><span class="std std-numref">Fig. 12</span></a></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-m-5 sd-fade-in">
 <summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
 <span class="sd-summary-text">Difference between DEM and DSM</span><span class="sd-summary-state-marker sd-summary-chevron-down"><svg aria-hidden="true" class="sd-octicon sd-octicon-chevron-down" height="1.5em" version="1.1" viewbox="0 0 24 24" width="1.5em"><path d="M5.22 8.22a.749.749 0 0 0 0 1.06l6.25 6.25a.749.749 0 0 0 1.06 0l6.25-6.25a.749.749 0 1 0-1.06-1.06L12 13.939 6.28 8.22a.749.749 0 0 0-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Although DEM (Digital Elevation Models) and DSM (Digital Surface Models) are often mentioned interchangeably, they have slightly different meaning:</p>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>DEM</strong> Is a representation of the topography without any other features like constructions or trees. It represents the height of ‘bare earth’ only <a class="reference internal" href="#dem-vs-dsm"><span class="std std-numref">Fig. 14</span></a>.</p></li>
-<li><p class="sd-card-text"><strong>DSM</strong> In turn, is a representation of the topography that includes features that are on the ‘bare soil’ like houses and vegetation <a class="reference internal" href="#dem-vs-dsm"><span class="std std-numref">Fig. 14</span></a>.</p></li>
+<li><p class="sd-card-text"><strong>DEM</strong> Is a representation of the topography without any other features like constructions or trees. It represents the height of ‘bare earth’ only <a class="reference internal" href="#dem-vs-dsm"><span class="std std-numref">Fig. 11</span></a>.</p></li>
+<li><p class="sd-card-text"><strong>DSM</strong> In turn, is a representation of the topography that includes features that are on the ‘bare soil’ like houses and vegetation <a class="reference internal" href="#dem-vs-dsm"><span class="std std-numref">Fig. 11</span></a>.</p></li>
 </ul>
-<figure class="align align-default" id="id14">
+<figure class="align align-default" id="id13">
 <span id="dem-vs-dsm"></span><img alt="Same area as a DEM (A) and DSM (B). Note how the DSM is representing the top of the trees and that reflects in the elevation values." src="_images/dem_vs_dsm.png"/>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Same area as a DEM (A) and DSM (B). Note how the DSM is representing the top of the trees and that reflects in the elevation values</span><a class="headerlink" href="#id14" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Same area as a DEM (A) and DSM (B). Note how the DSM is representing the top of the trees and that reflects in the elevation values</span><a class="headerlink" href="#id13" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </div>
-</details><figure class="align align-default" id="id15">
+</details><figure class="align align-default" id="id14">
 <span id="lidar"></span><img alt="DSM of the Neštich hillfort above Svätý Jur (Slovenia) made from LiDAR data (2016)" src="_images/lidar.gif"/>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">DSM of the Neštich hillfort above Svätý Jur (Slovenia) made from LiDAR data (2016)</span><a class="headerlink" href="#id15" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">DSM of the Neštich hillfort above Svätý Jur (Slovenia) made from LiDAR data (2016)</span><a class="headerlink" href="#id14" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <p>LiDAR data acquisition is performed using a laser beam, typically mounted on an aircraft. The laser “fires” pulses toward the Earth’s surface, with point densities typically ranging from 1 to 100 points per square meter. Higher point densities provide more detailed data but also require more intensive processing.</p>
 <p>The collected data forms a point cloud consisting of millions of points, each represented by XYZ coordinates. These coordinates are determined by measuring the time it takes for the laser beam to reach an object and reflect back to the sensor.</p>
-<p>One particularly interesting application of high-density point clouds is their ability to penetrate vegetation and capture multiple layers of information. This allows for the identification of different levels, such as bare soil, intermediate vegetation, and the top of the tree canopy <a class="reference internal" href="#lidar-flying"><span class="std std-numref">Fig. 16</span></a>.</p>
+<p>One particularly interesting application of high-density point clouds is their ability to penetrate vegetation and capture multiple layers of information. This allows for the identification of different levels, such as bare soil, intermediate vegetation, and the top of the tree canopy <a class="reference internal" href="#lidar-flying"><span class="std std-numref">Fig. 13</span></a>.</p>
 <blockquote>
-<div><figure class="align align-default" id="id16">
+<div><figure class="align align-default" id="id15">
 <span id="lidar-flying"></span><img alt="Animation illustrating the level of detail collected with a LiDAR sensor mounted on an airplane." src="_images/lidar_flying.gif"/>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Animation illustrating the level of detail collected with a LiDAR sensor mounted on an airplane</span><a class="headerlink" href="#id16" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Animation illustrating the level of detail collected with a LiDAR sensor mounted on an airplane</span><a class="headerlink" href="#id15" title="Link to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
 </section>
-<section id="crowd-source-data">
-<h4>Crowd source data<a class="headerlink" href="#crowd-source-data" title="Link to this heading"><span>#</span></a></h4>
+<section id="topographic-maps">
+<h4>Topographic maps<a class="headerlink" href="#topographic-maps" title="Link to this heading"><span>#</span></a></h4>
+<p>Topographic maps are the result of surveys using traditional optical survey methods like total stations and theodolites, but nowadays, these surveys are typically assisted by GPS measurements and can be complemented with other aerial imagery or even LiDAR and other sensors.
+Topographic maps include two big groups of information: man-made structures like roads and buildings and natural features with a great emphasis on altitude measurements that are on the base of terain representations and the deliniation of landscape features like ridges, valleys and water bodies <a class="reference internal" href="#topographic-map-example"><span class="std std-numref">Fig. 14</span></a></p>
+<figure class="align align-default" id="id16">
+<span id="topographic-map-example"></span><img alt='Detail of a topographic map the Tehachapi Mountains (California, USA). Section of "The National Map" by USGS' src="_images/topographic_map_example.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Detail of a topographic map the Tehachapi Mountains (California, USA). Section of “The National Map” by USGS</span><a class="headerlink" href="#id16" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+<p>Modern topographic maps are actually a composition of several distinct datasets that were acquired using a myriad of different techniques, however in many countries old paper based topographic maps continue to be a precious source of information.
+When a map is made of a a subset of of topographic elements in order to document a specific theme, we call it a ‘thematic map’. Common thematic maps include natural features like geology <a class="reference internal" href="#geology-map"><span class="std std-numref">Fig. 15</span></a> or man-made elements like communications and cadastral maps (or other delimitations) <a class="reference internal" href="#cadastral-map-dorset"><span class="std std-numref">Fig. 16</span></a>.</p>
+<figure class="align align-default" id="id17">
+<span id="geology-map"></span><img alt="Thematic map of the geology from the peninsula of Peniche (Portugal)" src="_images/geology_map.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Thematic map of the geology from the peninsula of Peniche (Portugal)</span><a class="headerlink" href="#id17" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+<figure class="align align-default" id="id18">
+<span id="cadastral-map-dorset"></span><img alt="Thematic map of the land parcels and roads from Dorset (Tasmania)" src="_images/cadastral_map_dorset.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Thematic map of the land parcels and roads from Dorset (Tasmania)</span><a class="headerlink" href="#id18" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
 </section>
-<section id="census-and-statistica-data">
-<h4>Census and Statistica data<a class="headerlink" href="#census-and-statistica-data" title="Link to this heading"><span>#</span></a></h4>
+<section id="volunteered-geographic-information-vgi">
+<h4>Volunteered geographic information (VGI)<a class="headerlink" href="#volunteered-geographic-information-vgi" title="Link to this heading"><span>#</span></a></h4>
+<p>Volunteered geographic information (VGI) is a term used to denote spatial data is produced by volunteers with the explicit purpose of contributing to larger mapping project. The information produced this way is usually used as an addition or improvement to a reference map or as an element depicting a particular event for which the volunteers were mobilized such as campaings to map affected areas after an hazard.
+The most well-known example is <a class="reference external" href="https://www.openstreetmap.org/">Open Street Map (OSM)</a> <a class="reference internal" href="#osm-nairobi"><span class="std std-numref">Fig. 17</span></a>, a project initiated in 2006 with the explicit objective of building a map of the entire world under a permissive use license. Nowadays, OSM does not rely solely on data produced by volunteers, but the OSM mapping community continues to play a crucial role—especially in data-poor contexts.</p>
+<figure class="align align-default" id="id19">
+<span id="osm-nairobi"></span><img alt="Map of Nairobi (Kenia) at the OSM portal" src="_images/osm_nairobi.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Map of Nairobi (Kenia) at the OSM portal</span><a class="headerlink" href="#id19" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="social-media-and-media-repositories-apis">
+<h4>Social media and media repositories APIs<a class="headerlink" href="#social-media-and-media-repositories-apis" title="Link to this heading"><span>#</span></a></h4>
+<p>Another interesting source of data is that produced in the context of social media applications. Most social networks provide an Application Programming Interface (API), which is essentially a collection of methods that allow for exploring and retrieving (anonymized) data published on a social networking platform.
+These services are usually behind a paid subscription or offer very limited functionality in their free versions, but they can be a valuable source of data for investigating people’s behavior before, during, and after a disaster.
+For example, researchers have used Twitter data to understand the extent to which citizens of Jakarta, Indonesia, utilize government-designated shelter facilities during a flood, as opposed to seeking shelter with family, friends, or other (perceived) safe locations <a class="reference internal" href="#jakarta-twitter"><span class="std std-numref">Fig. 18</span></a>.</p>
+<figure class="align align-default" id="id20">
+<span id="jakarta-twitter"></span><img alt="Type of shelters sought by citizens during the 2014 flood in Jakarta (excerpt) based on Twitter data. Adapted from da Silva Mano (2018)" src="_images/jakarta_twitter.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Type of shelters sought by citizens during the 2014 flood in Jakarta (excerpt) based on Twitter data. Adapted from da Silva Mano (2018) <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#id20" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="census-and-statistical-data">
+<h4>Census and statistical data<a class="headerlink" href="#census-and-statistical-data" title="Link to this heading"><span>#</span></a></h4>
+<p>Census data is information about a population. Based on it, a series of statistical indicators can be established to construct a socio-economic profile of the population of a country, a region, or a city. Historically, population censuses aimed to count the number of inhabitants to allow more efficient tax collection and military drafting.
+Nowadays, population censuses are much more than that and are an essential source of information for planning prevention and mitigation policies <a class="reference internal" href="#census-data"><span class="std std-numref">Fig. 19</span></a>.</p>
+<figure class="align align-default" id="id21">
+<span id="census-data"></span><img alt="Map showing population change from 2010 to 2020, based on data from the 2010 and 2020 censuses. Accurate population counts are essential to reliably measure these changes." src="_images/census_data.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Map showing population change from 2010 to 2020, based on data from the 2010 and 2020 censuses. Accurate population counts are essential to reliably measure these changes.</span><a class="headerlink" href="#id21" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+<p>Population data is typically collected by national agencies with a specific mandate, often starting at the household level and then aggregated into larger units such as neighborhoods, districts, or regions. However, due to a range of complex challenges—such as limited resources, logistical constraints, or political instability—not all countries are able to conduct systematic population surveys at the household level. In such cases, estimates based on larger aggregation units serve as the best available proxy for understanding population distribution.
+A good example of this approach is the  <a class="reference external" href="https://hub.worldpop.org/">WorldPop</a> project. WorldPop provides gridded population datasets derived from a combination of census data, satellite imagery, and statistical modeling, offering valuable insights for countries where detailed household-level data is unavailable <a class="reference internal" href="#world-pop"><span class="std std-numref">Fig. 20</span></a>.</p>
+<figure class="align align-default" id="id22">
+<span id="world-pop"></span><img alt="A visualization of WorldPop population estimates (100x100m grid cells) for Iku Island, Lake Kivu (Democratic Republic of the Congo), as of 2020" src="_images/world_pop.png"/>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">A visualization of WorldPop population estimates (100x100m grid cells) for Iku Island, Lake Kivu (Democratic Republic of the Congo), as of 2020.</span><a class="headerlink" href="#id22" title="Link to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
 <section id="sources-of-data-acess-and-dissemination">
 <h5>Sources of data, acess and dissemination<a class="headerlink" href="#sources-of-data-acess-and-dissemination" title="Link to this heading"><span>#</span></a></h5>
 </section>
@@ -330,6 +373,12 @@ When a map is made of a a subset of of topographic elements in order to document
 </section>
 <section id="data-sovereignty-control-licensing">
 <h5>Data sovereignty (control , licensing)<a class="headerlink" href="#data-sovereignty-control-licensing" title="Link to this heading"><span>#</span></a></h5>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a href="#id1" role="doc-backlink">1</a><span class="fn-bracket">]</span></span>
+<p>Da Silva Mano, A. (2018). GIS in Sustainable Urban Planning and Management: Methodological demonstration for Chapter 18 - Utilising volunteered geographic information to assess resident’s flood evacuation shelters. Case study:Jakarta (pp. 307-321). Web publication/site, University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC). https://www.itc.nl/urbangis/chapter-18/</p>
+</aside>
+</aside>
 </section>
 </section>
 </section>
@@ -343,12 +392,13 @@ When a map is made of a a subset of of topographic elements in order to document
 <li><a :data-current="activeSection === '#digital-elevation-models-dem'" class="reference internal" href="#digital-elevation-models-dem">Digital Elevation Models (DEM)</a></li>
 <li><a :data-current="activeSection === '#land-cover-maps'" class="reference internal" href="#land-cover-maps">Land Cover Maps</a></li>
 <li><a :data-current="activeSection === '#land-cover-indices'" class="reference internal" href="#land-cover-indices">Land Cover Indices</a></li>
-<li><a :data-current="activeSection === '#metereological-data'" class="reference internal" href="#metereological-data">Metereological data</a></li>
 <li><a :data-current="activeSection === '#aerial-and-drone-photography'" class="reference internal" href="#aerial-and-drone-photography">Aerial and drone photography</a></li>
-<li><a :data-current="activeSection === '#topographic-maps'" class="reference internal" href="#topographic-maps">Topographic maps</a></li>
+<li><a :data-current="activeSection === '#radar-data'" class="reference internal" href="#radar-data">Radar data</a></li>
 <li><a :data-current="activeSection === '#lidar-data'" class="reference internal" href="#lidar-data">LiDAR data</a></li>
-<li><a :data-current="activeSection === '#crowd-source-data'" class="reference internal" href="#crowd-source-data">Crowd source data</a></li>
-<li><a :data-current="activeSection === '#census-and-statistica-data'" class="reference internal" href="#census-and-statistica-data">Census and Statistica data</a><ul>
+<li><a :data-current="activeSection === '#topographic-maps'" class="reference internal" href="#topographic-maps">Topographic maps</a></li>
+<li><a :data-current="activeSection === '#volunteered-geographic-information-vgi'" class="reference internal" href="#volunteered-geographic-information-vgi">Volunteered geographic information (VGI)</a></li>
+<li><a :data-current="activeSection === '#social-media-and-media-repositories-apis'" class="reference internal" href="#social-media-and-media-repositories-apis">Social media and media repositories APIs</a></li>
+<li><a :data-current="activeSection === '#census-and-statistical-data'" class="reference internal" href="#census-and-statistical-data">Census and statistical data</a><ul>
 <li><a :data-current="activeSection === '#sources-of-data-acess-and-dissemination'" class="reference internal" href="#sources-of-data-acess-and-dissemination">Sources of data, acess and dissemination</a></li>
 <li><a :data-current="activeSection === '#data-sharing-and-dissemination-1-1-5-hour-exercise'" class="reference internal" href="#data-sharing-and-dissemination-1-1-5-hour-exercise">Data sharing and dissemination (1-1.5 hour exercise)</a></li>
 <li><a :data-current="activeSection === '#data-quality-granularity-fitness-for-purpose'" class="reference internal" href="#data-quality-granularity-fitness-for-purpose">Data quality (granularity, fitness for purpose)</a></li>

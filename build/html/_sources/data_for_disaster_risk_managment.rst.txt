@@ -2,14 +2,21 @@
 Data for Disaster Risk Managment
 ================================
 
-.. important:: Session objectives
+.. important:: Overall objectives
 
    After this session you should be able to:
 
    + Recognize the variety of spatial data available for risk assessment and how different hazards require specific spatial, spectral, and temporal characteristics. Assess these characteristics across data types while considering additional constraints that impact data selection;
-   + Where to search for and obtain some key datasets;
-   + Evaluate the quality of a dataset with regards to its suitability for a purpose;
    + Understand what data sovereignty is and why it is important.
+
+
+.. note:: What will you learn
+
+   In this session you will how learn to:
+
+   + Search and obtain key datasets;
+   + Evaluate the quality of a dataset with regards to its suitability for a purpose;
+
 
 What is Spatial data?
 ---------------------
@@ -157,10 +164,6 @@ Representing physical characteristics as an indice is a very useful indicator th
 
       NDVI (A) and NDWI (B) indeces for the Sistan Basin, in Iran, as of January 2005.
 
-
-Metereological data
-*******************
-
 Aerial and drone photography
 ****************************
 
@@ -176,36 +179,8 @@ The biggest difference between satellite and aerial and drone imagery is the spa
 
 Aerial photography is usually comissioned by national agencies to obtain a detailed based map for the whole country or a particular region, while drone imagery, due to the logistic challenge of scaling it up to large areas, is usually applied to cover localized areas like a development plan or a particular part of a city.
 
-Topographic maps
-****************
-
-Topographic maps are the result of surveys using traditional optical survey methods like total stations and theodolites, but nowadays, these surveys are typically assisted by GPS measurements and can be complemented with other aerial imagery or even LiDAR and other sensors.
-Topographic maps include two big groups of information: man-made structures like roads and buildings and natural features with a great emphasis on altitude measurements that are on the base of terain representations and the deliniation of landscape features like ridges, valleys and water bodies :numref:`topographic_map_example`
-
-.. _topographic_map_example:
-.. figure:: _static/figures/data_for_disaster_risk_managment/topographic_map_example.png
-      :alt: Detail of a topographic map the Tehachapi Mountains (California, USA). Section of "The National Map" by USGS
-      :figclass: align
-
-      Detail of a topographic map the Tehachapi Mountains (California, USA). Section of "The National Map" by USGS
-
-Modern topographic maps are actually a composition of several distinct datasets that were acquired using a myriad of different techniques, however in many countries old paper based topographic maps continue to be a precious source of information.
-When a map is made of a a subset of of topographic elements in order to document a specific theme, we call it a 'thematic map'. Common thematic maps include natural features like geology :numref:`geology_map` or man-made elements like communications and cadastral maps (or other delimitations) :numref:`cadastral_map_dorset`.
-
-.. _geology_map:
-.. figure:: _static/figures/data_for_disaster_risk_managment/geology_map.png
-      :alt: Thematic map of the geology from the peninsula of Peniche (Portugal)
-      :figclass: align
-
-      Thematic map of the geology from the peninsula of Peniche (Portugal)
-
-.. _cadastral_map_dorset:
-.. figure:: _static/figures/data_for_disaster_risk_managment/cadastral_map_dorset.png
-      :alt: Thematic map of the land parcels and roads from Dorset (Tasmania)
-      :figclass: align
-
-      Thematic map of the land parcels and roads from Dorset (Tasmania)
-
+Radar data
+**********
 
 LiDAR data
 **********
@@ -252,11 +227,91 @@ One particularly interesting application of high-density point clouds is their a
 
       Animation illustrating the level of detail collected with a LiDAR sensor mounted on an airplane
 
-Crowd source data
-*****************
+Topographic maps
+****************
 
-Census and Statistica data
-**************************
+Topographic maps are the result of surveys using traditional optical survey methods like total stations and theodolites, but nowadays, these surveys are typically assisted by GPS measurements and can be complemented with other aerial imagery or even LiDAR and other sensors.
+Topographic maps include two big groups of information: man-made structures like roads and buildings and natural features with a great emphasis on altitude measurements that are on the base of terain representations and the deliniation of landscape features like ridges, valleys and water bodies :numref:`topographic_map_example`
+
+.. _topographic_map_example:
+.. figure:: _static/figures/data_for_disaster_risk_managment/topographic_map_example.png
+      :alt: Detail of a topographic map the Tehachapi Mountains (California, USA). Section of "The National Map" by USGS
+      :figclass: align
+
+      Detail of a topographic map the Tehachapi Mountains (California, USA). Section of "The National Map" by USGS
+
+Modern topographic maps are actually a composition of several distinct datasets that were acquired using a myriad of different techniques, however in many countries old paper based topographic maps continue to be a precious source of information.
+When a map is made of a a subset of of topographic elements in order to document a specific theme, we call it a 'thematic map'. Common thematic maps include natural features like geology :numref:`geology_map` or man-made elements like communications and cadastral maps (or other delimitations) :numref:`cadastral_map_dorset`.
+
+.. _geology_map:
+.. figure:: _static/figures/data_for_disaster_risk_managment/geology_map.png
+      :alt: Thematic map of the geology from the peninsula of Peniche (Portugal)
+      :figclass: align
+
+      Thematic map of the geology from the peninsula of Peniche (Portugal)
+
+.. _cadastral_map_dorset:
+.. figure:: _static/figures/data_for_disaster_risk_managment/cadastral_map_dorset.png
+      :alt: Thematic map of the land parcels and roads from Dorset (Tasmania)
+      :figclass: align
+
+      Thematic map of the land parcels and roads from Dorset (Tasmania)
+
+Volunteered geographic information (VGI)
+****************************************
+
+Volunteered geographic information (VGI) is a term used to denote spatial data is produced by volunteers with the explicit purpose of contributing to larger mapping project. The information produced this way is usually used as an addition or improvement to a reference map or as an element depicting a particular event for which the volunteers were mobilized such as campaings to map affected areas after an hazard.
+The most well-known example is `Open Street Map (OSM) <Open Street Map_>`_ :numref:`osm_nairobi`, a project initiated in 2006 with the explicit objective of building a map of the entire world under a permissive use license. Nowadays, OSM does not rely solely on data produced by volunteers, but the OSM mapping community continues to play a crucial role—especially in data-poor contexts.
+
+.. _osm_nairobi:
+.. figure:: _static/figures/data_for_disaster_risk_managment/osm_nairobi.png
+      :alt: Map of Nairobi (Kenia) at the OSM portal
+      :figclass: align
+
+      Map of Nairobi (Kenia) at the OSM portal
+
+
+Social media and media repositories APIs
+****************************************
+
+Another interesting source of data is that produced in the context of social media applications. Most social networks provide an Application Programming Interface (API), which is essentially a collection of methods that allow for exploring and retrieving (anonymized) data published on a social networking platform.
+These services are usually behind a paid subscription or offer very limited functionality in their free versions, but they can be a valuable source of data for investigating people's behavior before, during, and after a disaster.
+For example, researchers have used Twitter data to understand the extent to which citizens of Jakarta, Indonesia, utilize government-designated shelter facilities during a flood, as opposed to seeking shelter with family, friends, or other (perceived) safe locations :numref:`jakarta_twitter`.
+
+.. _jakarta_twitter:
+.. figure:: _static/figures/data_for_disaster_risk_managment/jakarta_twitter.png
+      :alt: Type of shelters sought by citizens during the 2014 flood in Jakarta (excerpt) based on Twitter data. Adapted from da Silva Mano (2018)
+      :figclass: align
+
+      Type of shelters sought by citizens during the 2014 flood in Jakarta (excerpt) based on Twitter data. Adapted from da Silva Mano (2018) [#]_.
+
+Census and statistical data
+***************************
+
+Census data is information about a population. Based on it, a series of statistical indicators can be established to construct a socio-economic profile of the population of a country, a region, or a city. Historically, population censuses aimed to count the number of inhabitants to allow more efficient tax collection and military drafting.
+Nowadays, population censuses are much more than that and are an essential source of information for planning prevention and mitigation policies :numref:`census_data`.
+
+
+.. _census_data:
+.. figure:: _static/figures/data_for_disaster_risk_managment/census_data.png
+      :alt: Map showing population change from 2010 to 2020, based on data from the 2010 and 2020 censuses. Accurate population counts are essential to reliably measure these changes.
+      :figclass: align
+
+      Map showing population change from 2010 to 2020, based on data from the 2010 and 2020 censuses. Accurate population counts are essential to reliably measure these changes.
+
+
+Population data is typically collected by national agencies with a specific mandate, often starting at the household level and then aggregated into larger units such as neighborhoods, districts, or regions. However, due to a range of complex challenges—such as limited resources, logistical constraints, or political instability—not all countries are able to conduct systematic population surveys at the household level. In such cases, estimates based on larger aggregation units serve as the best available proxy for understanding population distribution.
+A good example of this approach is the  `WorldPop <WorldPop_>`_ project. WorldPop provides gridded population datasets derived from a combination of census data, satellite imagery, and statistical modeling, offering valuable insights for countries where detailed household-level data is unavailable :numref:`world_pop`.
+
+.. _world_pop:
+.. figure:: _static/figures/data_for_disaster_risk_managment/world_pop.png
+      :alt: A visualization of WorldPop population estimates (100x100m grid cells) for Iku Island, Lake Kivu (Democratic Republic of the Congo), as of 2020
+      :figclass: align
+
+      A visualization of WorldPop population estimates (100x100m grid cells) for Iku Island, Lake Kivu (Democratic Republic of the Congo), as of 2020.
+
+
+
 
 Sources of data, acess and dissemination
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -269,3 +324,6 @@ Data quality (granularity, fitness for purpose)
 
 Data sovereignty (control , licensing)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. [#] Da Silva Mano, A. (2018). GIS in Sustainable Urban Planning and Management: Methodological demonstration for Chapter 18 - Utilising volunteered geographic information to assess resident’s flood evacuation shelters. Case study:Jakarta (pp. 307-321). Web publication/site, University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC). https://www.itc.nl/urbangis/chapter-18/
