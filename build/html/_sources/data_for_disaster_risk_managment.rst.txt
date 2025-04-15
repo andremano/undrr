@@ -1,6 +1,6 @@
-================================
-Data for Disaster Risk Managment
-================================
+=================================
+Data for Disaster Risk Management
+=================================
 
 .. important:: Overall objectives
 
@@ -19,7 +19,7 @@ Data for Disaster Risk Managment
 
 
 What is Spatial data?
----------------------
+=====================
 
 In geoinformatics, also called geoinformation science, we use the term **spatial data** to describe any type of data that can be linked to a geographic place, usually via coordinates. This means that spatial data has an **unambiguous location** (i.e. it can be associated to a specific location on the Planet). The classic data type is a map, a more modern one could be a satellite image (for an introduction on remote sensing see box). However, we need to consider that our work is largely done digitally on a computer, and that we might want to use data that are actually quite variable in nature. When we think about disasters or risk, we may want to include:
 
@@ -182,10 +182,21 @@ Aerial photography is usually comissioned by national agencies to obtain a detai
 Radar data
 **********
 
+Radar data is obtained from active remote sensing satellites that emit energy waves in the microwave region of the electromagnetic spectrum toward the Earth's surface. These waves then bounce back after interacting with the surface. By analyzing the time delay and characteristics of the returning signal, it is possible to distinguish surface features and objects once the data is processed into an image.
+
+The main advantage of radar data—such as that provided by Synthetic Aperture Radar (SAR) sensors onboard the Sentinel-1 satellites—is that meteorological conditions like cloud cover do not affect data quality. This is in contrast to optical sensors, which depend on clear skies to capture usable imagery. Therefore, radar is an extremely valuable tool for near real-time monitoring of hazards commonly associated with cloud coverage, such as floods :numref:`radar_imagery`.
+
+.. _radar_imagery:
+.. figure:: _static/figures/data_for_disaster_risk_managment/radar_imagery.png
+      :alt: Example of radar imagery showing water (depicted by dark pixels). The image compares the same region in April 2016 (pre-flood event) to the peak of the flood in August 2016. Cloud coverage did not impede the acquisition of useful imagery.
+      :figclass: align
+
+      Example of radar imagery showing water (depicted by dark pixels). The image compares the same region in April 2016 (pre-flood event) to the peak of the flood in August 2016. Cloud coverage did not impede the acquisition of useful imagery.
+
 LiDAR data
 **********
 
-LiDAR or *Light Detection and Ranging* is an active remote sensing system that can be used to generate very high resolution (in other words, detailed) Digital Elevation and Digital Surface Models :numref:`lidar`
+LiDAR or *Light Detection and Ranging* is also an active remote sensing system that can be used to generate very high resolution (in other words, detailed) Digital Elevation and Digital Surface Models :numref:`lidar`
 
 .. dropdown:: Difference between DEM and DSM
    :animate: fade-in
@@ -311,6 +322,27 @@ A good example of this approach is the  `WorldPop <WorldPop_>`_ project. WorldPo
       A visualization of WorldPop population estimates (100x100m grid cells) for Iku Island, Lake Kivu (Democratic Republic of the Congo), as of 2020.
 
 
+Sensor data
+***********
+
+In an increasingly connected world, the ability to collect and relay data in near real-time is becoming ever more feasible. This is achieved through a vast array of sensors that transmit readings via networks—most commonly over the internet using the HTTPS protocol. These sensors come in many forms and can be used to monitor human activities, such as traffic volumes, or more frequently, environmental indicators like temperature, air quality, wind speed, and more :numref:`sensor_zanzibar`.
+
+
+.. _sensor_zanzibar:
+.. figure:: _static/figures/data_for_disaster_risk_managment/zanzibar_sensor.png
+      :alt: Example of air temperature data collected by a sensor installed in Zanzibar, Tanzania. The data is visualized using the OpenSensorWeb portal.
+      :figclass: align
+
+      Example of air temperature data collected by a sensor installed in Zanzibar, Tanzania. The data is visualized using the OpenSensorWeb portal.
+
+The data collected by sensors can be used to feed data portals, such as the one shown in :numref:`sensor_zanzibar`, but it can also be distributed in raw format—either via APIs or through direct downloads in tabular formats :numref:`zanzibar_sensor_data`.
+
+.. _zanzibar_sensor_data:
+.. figure:: _static/figures/data_for_disaster_risk_managment/zanzibar_sensor_data.png
+      :alt: The the data behind the visualization in :numref:`sensor_zanzibar` but as a table, suitable for using with third party applications.
+      :figclass: align
+
+      The the data behind the visualization in :numref:`sensor_zanzibar` but as a table, suitable for using with third party applications.
 
 
 Sources of data, acess and dissemination
