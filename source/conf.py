@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'undrr'
+project = 'UNDRR'
 copyright = 'University of Twente, 2025'
 author = 'André da Silva Mano (editor), Cees van Vesten (scientific coordination), Nanette Kingma, Elinor Meredith, Irene Manzella and Catherine Nabukulu'
 release = '1'
@@ -39,10 +39,20 @@ link_file = ['_static/assets/external_links.rst',
 
 html_permalinks_icon = '<span>#</span>'
 html_theme = 'sphinxawesome_theme'
+html_logo = "_static/itc_logo.png"
+html_static_path = ["_static"]
+html_css_files = [
+    'itc_logo.css',
+]
+
+html_theme_options = {
+    "logo_light": "_static/itc_logo.png",  # shown in light mode
+    "logo_dark": "_static/itc_logo.png",   # shown in dark mode (can be different)
+}
 
 # sphinx default themes
-#html_theme = 'alabaster'
-#html_theme = 'pyramid'
+# html_theme = 'alabaster'
+# html_theme = 'pyramid'
 
 # Allows storing external links in separated rst
 rst_epilog=""

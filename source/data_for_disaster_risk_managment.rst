@@ -345,17 +345,137 @@ The data collected by sensors can be used to feed data portals, such as the one 
       The the data behind the visualization in :numref:`sensor_zanzibar` but as a table, suitable for using with third party applications.
 
 
-Sources of data, acess and dissemination
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sources of data
+===============
+
+Most of the data types described in the previous section are made available through data portals. These portals may operate at regional, national, continental, or global scales, depending on the mandate and policies of the responsible institutions.
+
+In the table below, we provide a reference list of data portals with global or continental scope. While the list is not exhaustive, it includes essential resources—platforms that are also highly valuable for work at national or local levels.
+
+
+.. list-table:: Key Global and Continental Data Portals
+   :name: data-portals-table
+   :widths: 20 35 45
+   :header-rows: 1
+
+   * - Resource
+     - Link
+     - Description
+   * - Open Street Map
+     - `Open Street Map <https://www.openstreetmap.org/>`__
+     - Crowdsourced global basemap and vector data
+   * - WorldPop
+     - `WorldPop <https://hub.worldpop.org/>`__
+     - High-resolution population and demographic datasets
+   * - NORA
+     - `NORA <https://www.ncei.noaa.gov/products/natural-hazards>`__
+     - NOAA archive for natural hazard data
+   * - NASA Earth Data Search
+     - `NASA Earth Data <https://search.earthdata.nasa.gov/search>`__
+     - Search and access NASA Earth observation data
+   * - USGS Earth Explorer
+     - `Earth Explorer <https://earthexplorer.usgs.gov/>`__
+     - USGS platform for satellite and aerial imagery
+   * - Copernicus Browser
+     - `Copernicus Browser <https://browser.dataspace.copernicus.eu/>`__
+     - Browse and download Sentinel satellite data
+   * - Google Earth Engine
+     - `Earth Engine <https://earthengine.google.com/>`__
+     - Cloud-based geospatial analysis platform
+   * - OpenTopography
+     - `OpenTopography <https://opentopography.org/>`__
+     - Access to global topographic and LiDAR data
+   * - Open Sensor Web
+     - `Open Sensor Web <https://www.opensensorweb.de/en/>`__
+     - Real-time environmental sensor data viewer
+   * - WorldPop Hub
+     - `WorldPop Hub <https://hub.worldpop.org/>`__
+     - Population datasets and tools by WorldPop
+   * - Overture Maps
+     - `Overture Maps <https://overturemaps.org/>`__
+     - Open mapping data by tech industry alliance
+   * - ESA WorldCover
+     - `WorldCover Mapping <https://esa-worldcover.org/en>`__
+     - Global land cover map from ESA
+   * - GeoNames
+     - `GeoNames <https://geonames.org>`__
+     - Global database of geographic names
+   * - Natural Earth
+     - `Natural Earth <https://www.naturalearthdata.com/>`__
+     - Public domain map data for cartography
+   * - Database of Global Administrative Areas
+     - `GADM <https://gadm.org/>`__
+     - Country and regional boundary maps worldwide
+
+Large data portals, such as those operated by NASA or the United States Geological Survey (USGS), provide access to a wide range of satellite imagery, including global Digital Elevation Models (DEMs) like SRTM and ASTER.
+To make the most of these resources, it is important to understand the key characteristics of the sensors used to acquire the data, enabling more informed decision-making. Catalogs of sensor specifications, such as  `the one provided by ITC <ITC Satellite sensor database_>`_, can also serve as a valuable reference.
 
 Data sharing and dissemination (1-1.5 hour exercise)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Data quality (granularity, fitness for purpose)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Data quality
+============
 
-Data sovereignty (control , licensing)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Data quality is often misunderstood as being synonymous with *perfect data*. While this assumption is understandable, it’s not a constructive way to think about what *data quality* really means.
+
+A more useful approach is to define data quality in terms of **fitness for purpose**. In other words, a dataset may be perfectly suitable for one application but inadequate for another. Assessing data quality, therefore, requires us to consider the context in which the data will be used.
+
+Assessing data quality
+**********************
+
+To evaluate whether a (spatial) dataset meets the necessary quality standards, we first need to define the *ideal* requirements. This can be done by answering a few guiding questions:
+
+- **What is the scale of the analysis?** → related to *scope*
+- **What level of detail is needed?** → relates to *granularity* and *accuracy*
+- **What type of information is required?** → relates to *completeness*
+- **How current or frequent must the data be?** → relates to *temporal resolution*
+
+Once we have clear answers to these questions, we can compare them with the characteristics of available datasets and assess how well they align. This evaluation is made easier by understanding a few key concepts:
+
+Key concepts of data quality
+****************************
+
+- **Scope** refers to the **geographical, thematic, and temporal coverage** of a dataset.
+  *Example: A land cover map of Ethiopia for the year 2020.*
+
+- **Granularity** describes how **fine or coarse** a dataset is.
+  *Example: Population figures at the municipal level are more granular than those at the regional level.*
+
+- **Accuracy** can refer to spatial, temporal, or thematic precision.
+  *Example: A satellite image with 10m resolution provides more spatial detail than one at 50m.*
+
+- **Completeness** reflects how much of the expected data is actually present.
+  *Example: A temperature dataset covering 8 regions is incomplete if data for some days or districts is missing.*
+
+- **Temporal resolution** indicates how frequently data is updated or captured — a key factor in disaster risk management.
+  *Example: A satellite with a 7-day revisit cycle is more likely to capture images close to the time of a flood or earthquake.*
+
+Data sovereignty and licensing
+==============================
+
+Data sovereignty is an increasingly important concept in the digital age, especially as a critical element of national and organizational security. In simple terms, data sovereignty refers to the extent to which data is subject to the laws, regulations, and governance of a particular country or jurisdiction.
+
+This issue is particularly relevant in the context of disaster risk management, where data is an essential resource. Without timely and unrestricted access to key datasets, risk assessments and emergency responses can be delayed or compromised. Restrictions on access or usage—whether financial, legal, or technical—can have severe consequences during crises.
+
+Licensing and Usage Rights
+**************************
+
+Closely linked to data sovereignty is the issue of licensing. Understanding the license attached to a dataset is essential for determining how the data can be used. In some cases, the licensing terms may not align with national laws or may impose restrictions that limit the intended use of the data. This can trigger the need for a contingency plan to ensure operational continuity.
+
+Licensing models can generally be grouped into two broad categories:
+
+- **Open licenses**, such as Creative Commons, which encourage sharing, reuse, and redistribution.
+- **Proprietary licenses**, which often restrict the use, redistribution, or modification of data—especially for commercial or external applications.
+
+Software Dependencies and Format Lock-In
+****************************************
+
+A less obvious but significant form of data sovereignty risk stems from the use of proprietary software. Many proprietary systems rely on data formats that are not interoperable. As a result, accessing or fully using the data may require a valid license for the specific software that supports those formats. This dependency can limit flexibility and increase costs in the long run.
+
+Incorporating Data Sovereignty into Risk Planning
+*************************************************
+
+Evaluating licensing and sovereignty-related constraints should be a standard part of any data management and risk planning strategy. Ensuring that critical data is accessible, legally usable, and interoperable is key to strengthening resilience and preparedness in disaster risk management.
 
 
 .. [#] Da Silva Mano, A. (2018). GIS in Sustainable Urban Planning and Management: Methodological demonstration for Chapter 18 - Utilising volunteered geographic information to assess resident’s flood evacuation shelters. Case study:Jakarta (pp. 307-321). Web publication/site, University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC). https://www.itc.nl/urbangis/chapter-18/

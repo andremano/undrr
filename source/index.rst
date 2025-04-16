@@ -15,9 +15,6 @@ Welcome to undrr's documentation!
    :maxdepth: 2
    :caption: Appendices
 
-
-
-
 Indices and tables
 ==================
 
