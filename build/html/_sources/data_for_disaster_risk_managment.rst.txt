@@ -718,6 +718,8 @@ To explore the data provided by these servives, simply follow the instructions.
      });
    </script>
 
+.. note::
+   You can use this web map application in a `dedicated tab <WMS web client_>`_ for a larger view or use in fullscreen mode.
 
 Web services provide an efficient and flexible way to explore and analyze data without the need to download it or install specific software. Thanks to their focus on interoperability, the same URLs you used in this exercise can seamlessly integrate with various GIS software, applications, or workflows, enabling you to harness their capabilities across different platforms.
 

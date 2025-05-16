@@ -22,3 +22,4 @@
 .. _Data Maturity Assessment Matrix: https://docs.google.com/spreadsheets/d/1XtM8vdy_84BbvucoiYaYM2Xvz7usOfeY/edit?usp=sharing&ouid=102502550243881086708&rtpof=true&sd=true
 .. _OGC: https://www.ogc.org/
 .. _ITC Satellite sensor database: https://webapps.itc.utwente.nl/sensor/default.aspx?view=allsatellites
+.. _WMS web client: https://andremano.github.io/undrr/index.html
