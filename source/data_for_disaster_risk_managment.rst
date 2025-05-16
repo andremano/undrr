@@ -410,8 +410,47 @@ In the table below, we provide a reference list of data portals with global or c
 Large data portals, such as those operated by NASA or the United States Geological Survey (USGS), provide access to a wide range of satellite imagery, including global Digital Elevation Models (DEMs) like SRTM and ASTER.
 To make the most of these resources, it is important to understand the key characteristics of the sensors used to acquire the data, enabling more informed decision-making. Catalogs of sensor specifications, such as  `the one provided by ITC <ITC Satellite sensor database_>`_, can also serve as a valuable reference.
 
-Data sharing and dissemination (1-1.5 hour exercise)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Data sharing and dissemination with OGC webservices
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Data sharing and dissemination involve the process of publishing and distributing data. This can be achieved through direct downloads, as is the case with some of the global data providers mentioned earlier, or by enabling **web services** that seamlessly publish data using open standards.
+
+For spatial data, the most common (geo) web services are those defined by the `Open Geospatial Consortium (OGC) <OGC>`_. Among the many standards maintained by OGC, the most widely used are the **Web Map Service (WMS)** and the **Web Feature Service (WFS)**. The WMS is designed to publish spatial data as *static images*, while the WFS provides access to spatial data as *features*—geometric objects such as roads, buildings, or administrative boundaries, along with their associated attributes.
+
+The WFS specification is better suited for integration within external data analysis workflows, as it allows direct interaction with the data. In contrast, the WMS focuses solely on data visualization, making it ideal for creating maps but less practical for detailed analytical purposes.
+
+However the critical characteristic of OGC webservices is that they allow data interoperability. Once a dataset is published using one the OGC specifications, it can be consumed by any client application (desktop GIS, either proprietary or open source, web applications, mobile applications, etc).
+
+.. dropdown:: A simple OGC webservices client
+   :animate: fade-in
+   :chevron: down-up
+   :color: info
+   :margin: 5
+
+   You can experiment yourself with OGC webservices using the simple web map client application below. Simply copy the URL of one of the suggested webservices below into the *WMS/WFS Layer Loader*, click on *Load Service* and check the layer(S) you want to have added to the map.
+
+   .. list-table:: Examples of WMS/WFS servives
+      :name: Examples of WMS/WFS servives
+      :widths: 20 45 45 45
+      :header-rows: 1
+
+     * - Service type
+       - Description
+       - URL
+       - Proposed task
+     * - WMS
+       - DEM/DSM of the Netherlands
+       - `https://service.pdok.nl/rws/ahn/wms/v1_0?request=GetCapabilities&service=WMS <https://service.pdok.nl/rws/ahn/wms/v1_0?request=GetCapabilities&service=WMS>`__
+       - See the difference between DEM and DSM
+     * - WFS
+       - World boundaries from NaturalEarth
+       - `https://ahocevar.com/geoserver/wfs?service=WFS&version=1.1.0&request=GetCapabilities <https://ahocevar.com/geoserver/wfs?service=WFS&version=1.1.0&request=GetCapabilities>`__
+       - Just browse and explore the layers
+
+
+.. raw:: html
+   :file: _static/html_pages/ogc_webservices_simple_client.html
+
 
 Data quality
 ============
@@ -477,5 +516,19 @@ Incorporating Data Sovereignty into Risk Planning
 
 Evaluating licensing and sovereignty-related constraints should be a standard part of any data management and risk planning strategy. Ensuring that critical data is accessible, legally usable, and interoperable is key to strengthening resilience and preparedness in disaster risk management.
 
+Data ecosystems
+===============
+
+The aspects of data quality, data sovereignty, and data licensing briefly addressed in the previous sections constitute critical elements of a **data ecosystem** for a country, region, or organization.
+A data ecosystem can be defined as "*The people and technologies collecting, handling, and using the data and the interactions between them*" [#]_.
+
+In the context of disaster risk management, the data ecosystem places great emphasis on preparedness—that is, the ability to access *quality*, up-to-date (and updatable) data in a timely and fully interoperable manner among stakeholders and communities.
+Assessing the level of preparedness of our data ecosystem can be a complex exercise that goes beyond the aspects of licensing, interoperability, and data quality discussed earlier. It requires a comprehensive assessment of additional elements and should be conducted as part of a preparedness plan.
+
+Such an assessment can be performed using the **Data Ecosystem Maturity Assessment Framework** developed by `510 <510_>`_, along with the `Data Maturity Assessment Matrix <Data Maturity Assessment Matrix_>`_. For a full explanation of the **Data Ecosystem Maturity Assessment Framework**, please refer to the technical guidance note, which is part of Component 2 of the training.
+
+
 
 .. [#] Da Silva Mano, A. (2018). GIS in Sustainable Urban Planning and Management: Methodological demonstration for Chapter 18 - Utilising volunteered geographic information to assess resident’s flood evacuation shelters. Case study:Jakarta (pp. 307-321). Web publication/site, University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC). https://www.itc.nl/urbangis/chapter-18/
+.. [#] Parsons, M.A.; Godøy, Ø.; Ledrew, E.; De Bruin, T.F.; Danis, B.; Tomlinson, S.; Carlson, D. A conceptual framework for managing very diverse data for complex, interdisciplinary science. J. Inf. Sci. 2011, 37, 555–569.
+
