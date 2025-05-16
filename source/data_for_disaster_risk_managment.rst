@@ -719,8 +719,7 @@ To explore the data provided by these servives, simply follow the instructions.
    </script>
 
 
-From the exercise, you probably realized that webservices are an excellent way to explore and assess data without having to download it and use then install specific software. However, because webservices are all about interoperability, the same URL's you used in the exercise can also be used in any GIS software, application or workflow you want!
-
+Web services provide an efficient and flexible way to explore and analyze data without the need to download it or install specific software. Thanks to their focus on interoperability, the same URLs you used in this exercise can seamlessly integrate with various GIS software, applications, or workflows, enabling you to harness their capabilities across different platforms.
 
 Data quality
 ============
@@ -797,6 +796,8 @@ Assessing the level of preparedness of our data ecosystem can be a complex exerc
 
 Such an assessment can be performed using the **Data Ecosystem Maturity Assessment Framework** developed by `510 <510_>`_, along with the `Data Maturity Assessment Matrix <Data Maturity Assessment Matrix_>`_. For a full explanation of the **Data Ecosystem Maturity Assessment Framework**, please refer to the technical guidance note, which is part of Component 2 of the training.
 
+References
+==========
 
 .. [#] Da Silva Mano, A. (2018). GIS in Sustainable Urban Planning and Management: Methodological demonstration for Chapter 18 - Utilising volunteered geographic information to assess resident’s flood evacuation shelters. Case study:Jakarta (pp. 307-321). Web publication/site, University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC). https://www.itc.nl/urbangis/chapter-18/
 .. [#] Parsons, M.A.; Godøy, Ø.; Ledrew, E.; De Bruin, T.F.; Danis, B.; Tomlinson, S.; Carlson, D. A conceptual framework for managing very diverse data for complex, interdisciplinary science. J. Inf. Sci. 2011, 37, 555–569.
