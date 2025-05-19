@@ -10,7 +10,6 @@ Welcome to undrr's documentation!
    :maxdepth: 3
 
    data_for_disaster_risk_managment
-   final_quizz
 
 .. toctree::
    :maxdepth: 2

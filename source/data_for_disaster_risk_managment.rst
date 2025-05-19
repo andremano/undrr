@@ -422,8 +422,8 @@ The WFS specification is better suited for integration within external data anal
 However the critical characteristic of OGC webservices is that they allow data interoperability. Once a dataset is published using one the OGC specifications, it can be consumed by any client application (desktop GIS, either proprietary or open source, web applications, mobile applications, etc).
 
 
-Exercise: explore WMS services with a basic web map client
-**********************************************************
+EXERCISE: explore WMS services with a basic web map client
+==========================================================
 
 In order to use webservices, we need to know the address (i.e. the URL) of the service. In the table below, we provide a list to WMS services.
 To explore the data provided by these servives, simply follow the instructions.
@@ -760,6 +760,33 @@ Key concepts of data quality
 - **Temporal resolution** indicates how frequently data is updated or captured — a key factor in disaster risk management.
   *Example: A satellite with a 7-day revisit cycle is more likely to capture images close to the time of a flood or earthquake.*
 
+
+UNDRR's data quality guidelines on disaster risk data management
+****************************************************************
+
+In the particular case of Disaster Risk Management, the assessment of data quality is often done in the scope of Effective Early Warning Systems (EWS).  These systems depend on sufficiently available and high-quality data to ensure accurate risk assessments and timely warnings. Cai and Zhu (2015) [#]_ identify five dimensions of data quality that align closely with the main criteria for data sufficiency in EWS, as detailed by United Nations Office for Disaster Risk Reduction (UNDRR)'s guide on disaster risk data management[#]_.
+
+1. **Availability**
+   Effective Early Warning Systems (EWS) depend on accessible, timely, and up-to-date data.
+   Real-time or near-real-time datasets are crucial to accommodate rapidly changing risks,
+   ensuring actionable warnings without delays.
+
+2. **Reliability**
+   Data must be accurate, consistent, complete, and validated regularly. This ensures
+   comprehensive coverage of hazards, exposure, and vulnerable groups while maintaining
+   consistent collection methods over time.
+
+3. **Fitness**
+   Relevant and sufficient data tailored to specific hazards is key. Spatial and temporal
+   resolution must match the disaster's nature, with redundancy ensuring alternative sources
+   in case of primary data failure.
+
+4. **Security, Privacy, and Ethics**
+   Ethical data management must comply with privacy, transparency, and ownership laws.
+   Applying the "do no harm" principle safeguards vulnerable populations and ensures data
+   serves its intended purpose responsibly.
+
+
 Data sovereignty and licensing
 ==============================
 
@@ -787,6 +814,16 @@ Incorporating Data Sovereignty into Risk Planning
 
 Evaluating licensing and sovereignty-related constraints should be a standard part of any data management and risk planning strategy. Ensuring that critical data is accessible, legally usable, and interoperable is key to strengthening resilience and preparedness in disaster risk management.
 
+
+EXERCISE: self-assessment quizz
+===============================
+
+Use this 17-question single-choice quiz to test your knowledge. Each question has only one correct answer. Your results will be displayed upon completing the final question.
+
+.. raw:: html
+   :file: _static/html_pages/final_quizz.html
+
+
 Data ecosystems
 ===============
 
@@ -798,9 +835,15 @@ Assessing the level of preparedness of our data ecosystem can be a complex exerc
 
 Such an assessment can be performed using the **Data Ecosystem Maturity Assessment Framework** developed by `510 <510_>`_, along with the `Data Maturity Assessment Matrix <Data Maturity Assessment Matrix_>`_. For a full explanation of the **Data Ecosystem Maturity Assessment Framework**, please refer to the technical guidance note, which is part of Component 2 of the training.
 
+
+Data Ecosystem Maturity Assessment Framework
+============================================
+
+
 References
 ==========
 
 .. [#] Da Silva Mano, A. (2018). GIS in Sustainable Urban Planning and Management: Methodological demonstration for Chapter 18 - Utilising volunteered geographic information to assess resident’s flood evacuation shelters. Case study:Jakarta (pp. 307-321). Web publication/site, University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC). https://www.itc.nl/urbangis/chapter-18/
 .. [#] Parsons, M.A.; Godøy, Ø.; Ledrew, E.; De Bruin, T.F.; Danis, B.; Tomlinson, S.; Carlson, D. A conceptual framework for managing very diverse data for complex, interdisciplinary science. J. Inf. Sci. 2011, 37, 555–569.
-
+.. [#] Cai, L. and Zhu, Y.: The Challenges of Data Quality and Data Quality Assessment in the Big Data Era, CODATA, 14, 2, https://doi.org/10.5334/dsj-2015-002, 2015
+.. [#] https://www.undrr.org/publication/handbook-use-risk-knowledge-multi-hazard-early-warning-systems-2024
