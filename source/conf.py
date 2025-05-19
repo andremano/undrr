@@ -6,10 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'UNDRR'
+project = 'Welcome to the Data for Disaster Risk Management'
 copyright = 'University of Twente, 2025'
 author = 'André da Silva Mano (editor), Cees van Vesten (scientific coordination), Nanette Kingma, Elinor Meredith, Irene Manzella and Catherine Nabukulu'
-release = '1'
+release = ''
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

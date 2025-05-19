@@ -815,8 +815,8 @@ Incorporating Data Sovereignty into Risk Planning
 Evaluating licensing and sovereignty-related constraints should be a standard part of any data management and risk planning strategy. Ensuring that critical data is accessible, legally usable, and interoperable is key to strengthening resilience and preparedness in disaster risk management.
 
 
-EXERCISE: self-assessment quizz
-===============================
+EXERCISE: self-assessment quiz
+==============================
 
 Use this 17-question single-choice quiz to test your knowledge. Each question has only one correct answer. Your results will be displayed upon completing the final question.
 

@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to undrr's documentation!
-=================================
+Welcome to the Data for Disaster Risk Management
+================================================
 
 .. toctree::
    :maxdepth: 3
@@ -15,9 +15,3 @@ Welcome to undrr's documentation!
    :maxdepth: 2
    :caption: Appendices
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
