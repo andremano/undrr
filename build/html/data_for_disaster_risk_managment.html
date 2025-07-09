@@ -402,7 +402,7 @@ A good example of this approach is the  <a class="reference external" href="http
 <td><p><a class="reference external" href="https://sites.research.google/gr/open-buildings/">Google Open Buildings:</a></p></td>
 <td><p>A dataset of building footprints maintained by Google.</p></td>
 </tr>
-<tr class="row-odd"><td><p>Google Open buildings</p></td>
+<tr class="row-odd"><td><p>Global Health Data Exchange</p></td>
 <td><p><a class="reference external" href="https://ghdx.healthdata.org/">Global Health Data Exchange</a></p></td>
 <td><p>A catalog of (mostly statistical) health-related data</p></td>
 </tr>
@@ -410,13 +410,14 @@ A good example of this approach is the  <a class="reference external" href="http
 </table>
 <p>Large data portals, such as those operated by NASA or the United States Geological Survey (USGS), provide access to a wide range of satellite imagery, including global Digital Elevation Models (DEMs) like SRTM and ASTER.
 To make the most of these resources, it is important to understand the key characteristics of the sensors used to acquire the data, enabling more informed decision-making. Catalogs of sensor specifications, such as  <a class="reference external" href="https://webapps.itc.utwente.nl/sensor/default.aspx?view=allsatellites">the one provided by ITC</a>, can also serve as a valuable reference.</p>
-<p>The importance of global and regional datasets is particularly pronounced in low- and middle-income countries or fragile states, where national data systems often face challenges such as limited coverage, outdated information, or concerns about reliability and consistency. In these contexts, regional and global data sources can serve as valuable supplements (or even proxies) that can help to fill critical information gaps and enhance data accuracy.
-Data sharing and dissemination with OGC webservices
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</p>
+<p>The importance of global and regional datasets is particularly pronounced in low- and middle-income countries or fragile states, where national data systems often face challenges such as limited coverage, outdated information, or concerns about reliability and consistency. In these contexts, regional and global data sources can serve as valuable supplements (or even proxies) that can help to fill critical information gaps and enhance data accuracy.</p>
+<section id="data-sharing-and-dissemination-with-ogc-webservices">
+<h3>Data sharing and dissemination with OGC webservices<a class="headerlink" href="#data-sharing-and-dissemination-with-ogc-webservices" title="Link to this heading"><span>#</span></a></h3>
 <p>Data sharing and dissemination involve the process of publishing and distributing data. This can be achieved through direct downloads, as is the case with some of the global data providers mentioned earlier, or by enabling <strong>web services</strong> that seamlessly publish data using open standards.</p>
 <p>For spatial data, the most common (geo) web services are those defined by the <a class="reference external" href="OGC">Open Geospatial Consortium (OGC)</a>. Among the many standards maintained by OGC, the most widely used are the <strong>Web Map Service (WMS)</strong> and the <strong>Web Feature Service (WFS)</strong>. The WMS is designed to publish spatial data as <em>static images</em>, while the WFS provides access to spatial data as <em>features</em>—geometric objects such as roads, buildings, or administrative boundaries, along with their associated attributes.</p>
 <p>The WFS specification is better suited for integration within external data analysis workflows, as it allows direct interaction with the data. In contrast, the WMS focuses solely on data visualization, making it ideal for creating maps but less practical for detailed analytical purposes.</p>
 <p>However the critical characteristic of OGC webservices is that they allow data interoperability. Once a dataset is published using one the OGC specifications, it can be consumed by any client application (desktop GIS, either proprietary or open source, web applications, mobile applications, etc).</p>
+</section>
 </section>
 <section id="exercise-explore-wms-services-with-a-basic-web-map-client">
 <h2>EXERCISE: explore WMS services with a basic web map client<a class="headerlink" href="#exercise-explore-wms-services-with-a-basic-web-map-client" title="Link to this heading"><span>#</span></a></h2>
@@ -1094,7 +1095,6 @@ Assessing the level of preparedness of our data ecosystem can be a complex exerc
 <li><p>Use examples or evidence from your local context.</p></li>
 <li><p>Consider recent initiatives, policies, or projects related to data infrastructure.</p></li>
 <li><p>Reflect on challenges or strengths you have observed.</p></li>
-<li><p>Collaborate to gain diverse perspectives.</p></li>
 </ul>
 <!DOCTYPE html>
 <html lang="en">
@@ -1311,7 +1311,10 @@ Assessing the level of preparedness of our data ecosystem can be a complex exerc
 <li class="toctree-l3"><a class="reference internal" href="#sensor-data">Sensor data</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#sources-of-data">Sources of data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sources-of-data">Sources of data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-sharing-and-dissemination-with-ogc-webservices">Data sharing and dissemination with OGC webservices</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#exercise-explore-wms-services-with-a-basic-web-map-client">EXERCISE: explore WMS services with a basic web map client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#data-quality">Data quality</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#assessing-data-quality">Assessing data quality</a></li>

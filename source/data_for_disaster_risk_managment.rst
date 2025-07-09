@@ -406,7 +406,7 @@ In the table below, we provide a reference list of data portals with global or c
    * - Google Open buildings
      - `Google Open Buildings:  <https://sites.research.google/gr/open-buildings/>`__
      - A dataset of building footprints maintained by Google.
-   * - Google Open buildings
+   * - Global Health Data Exchange
      - `Global Health Data Exchange <https://ghdx.healthdata.org/>`__
      - A catalog of (mostly statistical) health-related data
 
@@ -414,8 +414,10 @@ Large data portals, such as those operated by NASA or the United States Geologic
 To make the most of these resources, it is important to understand the key characteristics of the sensors used to acquire the data, enabling more informed decision-making. Catalogs of sensor specifications, such as  `the one provided by ITC <ITC Satellite sensor database_>`_, can also serve as a valuable reference.
 
 The importance of global and regional datasets is particularly pronounced in low- and middle-income countries or fragile states, where national data systems often face challenges such as limited coverage, outdated information, or concerns about reliability and consistency. In these contexts, regional and global data sources can serve as valuable supplements (or even proxies) that can help to fill critical information gaps and enhance data accuracy.
+
+
 Data sharing and dissemination with OGC webservices
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***************************************************
 
 Data sharing and dissemination involve the process of publishing and distributing data. This can be achieved through direct downloads, as is the case with some of the global data providers mentioned earlier, or by enabling **web services** that seamlessly publish data using open standards.
 
@@ -912,7 +914,6 @@ Based on what you know about the data infrastructure in your country, region, or
 - Use examples or evidence from your local context.
 - Consider recent initiatives, policies, or projects related to data infrastructure.
 - Reflect on challenges or strengths you have observed.
-- Collaborate to gain diverse perspectives.
 
 .. raw:: html
 
