@@ -403,13 +403,17 @@ In the table below, we provide a reference list of data portals with global or c
    * - Natural Earth
      - `Natural Earth <https://www.naturalearthdata.com/>`__
      - Public domain map data for cartography
-   * - Database of Global Administrative Areas
-     - `GADM <https://gadm.org/>`__
-     - Country and regional boundary maps worldwide
+   * - Google Open buildings
+     - `Google Open Buildings:  <https://sites.research.google/gr/open-buildings/>`__
+     - A dataset of building footprints maintained by Google.
+   * - Google Open buildings
+     - `Global Health Data Exchange <https://ghdx.healthdata.org/>`__
+     - A catalog of (mostly statistical) health-related data
 
 Large data portals, such as those operated by NASA or the United States Geological Survey (USGS), provide access to a wide range of satellite imagery, including global Digital Elevation Models (DEMs) like SRTM and ASTER.
 To make the most of these resources, it is important to understand the key characteristics of the sensors used to acquire the data, enabling more informed decision-making. Catalogs of sensor specifications, such as  `the one provided by ITC <ITC Satellite sensor database_>`_, can also serve as a valuable reference.
 
+The importance of global and regional datasets is particularly pronounced in low- and middle-income countries or fragile states, where national data systems often face challenges such as limited coverage, outdated information, or concerns about reliability and consistency. In these contexts, regional and global data sources can serve as valuable supplements (or even proxies) that can help to fill critical information gaps and enhance data accuracy.
 Data sharing and dissemination with OGC webservices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -809,8 +813,8 @@ Software Dependencies and Format Lock-In
 
 A less obvious but significant form of data sovereignty risk stems from the use of proprietary software. Many proprietary systems rely on data formats that are not interoperable. As a result, accessing or fully using the data may require a valid license for the specific software that supports those formats. This dependency can limit flexibility and increase costs in the long run.
 
-Incorporating Data Sovereignty into Risk Planning
-*************************************************
+Incorporating Data Sovereignty into preparedeness planning
+**********************************************************
 
 Evaluating licensing and sovereignty-related constraints should be a standard part of any data management and risk planning strategy. Ensuring that critical data is accessible, legally usable, and interoperable is key to strengthening resilience and preparedness in disaster risk management.
 
@@ -833,11 +837,236 @@ A data ecosystem can be defined as "*The people and technologies collecting, han
 In the context of disaster risk management, the data ecosystem places great emphasis on preparedness—that is, the ability to access *quality*, up-to-date (and updatable) data in a timely and fully interoperable manner among stakeholders and communities.
 Assessing the level of preparedness of our data ecosystem can be a complex exercise that goes beyond the aspects of licensing, interoperability, and data quality discussed earlier. It requires a comprehensive assessment of additional elements and should be conducted as part of a preparedness plan.
 
-Such an assessment can be performed using the **Data Ecosystem Maturity Assessment Framework** developed by `510 <510_>`_, along with the `Data Maturity Assessment Matrix <Data Maturity Assessment Matrix_>`_. For a full explanation of the **Data Ecosystem Maturity Assessment Framework**, please refer to the technical guidance note, which is part of Component 2 of the training.
+
+Data Maturity Assessment Matrix
+===============================
+
+The assessment of the level of prepardness of a data ecosystem can be performed using the **Data Ecosystem Maturity Assessment Framework** [#]_ developed by `510 <510_>`_, along with the `Data Maturity Assessment Matrix <Data Maturity Assessment Matrix_>`_.
+
+The Data Maturity Assessment Matrix is a diagnostic tool designed to evaluate the development of a data ecosystem across four key dimensions, each assessed along five levels of maturity. Within each dimension, specific indicators help gauge progress. Stakeholders with in-depth knowledge of the national or regional data ecosystem are invited to assess each indicator, determining its current level of maturity. This process helps identify strengths, gaps, and opportunities for improvement in data governance and use.
+
+The table below provides a simplified version of the Data Maturity Assessment Matrix. The descriptions of the phases have been simplified, and the list of indicators for each dimension has been omitted. The descriptions of each phase within a dimension are adapted from the detailed indicators in the full matrix and are phrased to suggest what a general indicator might be. For the full matrix, please refer to the `Data Maturity Assessment Matrix <Data Maturity Assessment Matrix_>`_
+
+.. list-table:: **A simplified Data Maturity Matrix**
+   :widths: 20 16 16 16 16 16
+   :header-rows: 1
+
+   * - Dimension
+     - Phase 1 - Incomplete, ad hoc
+     - Phase 2 - Recognized but reactive
+     - Phase 3 - Managed and defined
+     - Phase 4 - Controlled, optimizing
+     - Phase 5 - State of the art, transformational
+   * - Actors & Roles
+     - Roles undefined; unclear responsibilities.
+     - Key stakeholders identified but weak coordination.
+     - Formal frameworks define roles and responsibilities.
+     - Coordination mechanisms are routine and inclusive.
+     - Stakeholders self-organize and collaborate dynamically.
+   * - Data Value Chain
+     - Data siloed and inaccessible.
+     - Available only by formal request.
+     - Data is accessible via structured platforms.
+     - Metadata and standards enable reuse and interoperability.
+     - Governance ensures ethical, secure, and open-by-default data sharing.
+   * - Governance
+     - No strategy or shared standards.
+     - Importance of standards is acknowledged.
+     - Strategy exists but lacks enforcement.
+     - Strategy is updated regularly and increasingly enforced.
+     - Fully implemented, nationally integrated data strategy.
+   * - Infrastructure & Interoperability
+     - No shared infrastructure or digital tools.
+     - Some tools exist but are not interoperable or widely adopted.
+     - National infrastructure with some integration.
+     - Interoperable systems supporting cross-sector collaboration.
+     - Robust, scalable infrastructure with seamless data exchange.
+   * - Data Quality & Standards
+     - No agreed standards; data quality inconsistent or unknown.
+     - Early steps toward standardization; uneven application.
+     - Documented quality processes partially applied.
+     - Consistent standards with regular updates.
+     - High-quality data; standards fully institutionalized.
+   * - Data Use & Impact
+     - Data rarely used for decisions or policy.
+     - Used occasionally, often in response to requests.
+     - Regularly used in reports and planning.
+     - Embedded in workflows; informs cross-sector decisions.
+     - Drives innovation, accountability, and measurable impact.
 
 
-Data Ecosystem Maturity Assessment Framework
-============================================
+EXERCISE: use the simplified Data Maturity Asessment Matrix
+===========================================================
+
+Based on what you know about the data infrastructure in your country, region, or city, identify and evaluate the different dimensions of this infrastructure. For each dimension, determine which phase best describes its current state or level of development.
+
+**Steps**
+
+1. Review each dimension of data infrastructure (e.g., data availability, accessibility, quality, governance, security, technology, skills, etc.).
+2. Discuss within your group to decide which phase (e.g., *Phase 1 - incomplet, ad hoc*, *Phase 2 - Recognized but not reactice*, *etc*) best fits the current status of each dimension.
+3. Share your group’s reasoning and justification for each assessment with the class.
+
+**Tips for Your Assessment**
+
+
+- Use examples or evidence from your local context.
+- Consider recent initiatives, policies, or projects related to data infrastructure.
+- Reflect on challenges or strengths you have observed.
+- Collaborate to gain diverse perspectives.
+
+.. raw:: html
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Simplified Data Maturity Matrix</title>
+		<style>
+			body {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				line-height: 1.4;
+				color: #333;
+				max-width: 850px;
+				margin: 0 auto;
+				padding: 15px;
+				font-size: 13px;
+			}
+			h1 {
+				text-align: center;
+				color: #2c3e50;
+				margin-bottom: 20px;
+				font-size: 20px;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+				margin-bottom: 20px;
+				font-size: 12px;
+			}
+			th {
+				background-color: #2c3e50;
+				color: white;
+				font-weight: 600;
+				text-align: left;
+				padding: 10px;
+				position: sticky;
+				top: 0;
+			}
+			td {
+				padding: 10px;
+				border-bottom: 1px solid #e0e0e0;
+				vertical-align: top;
+			}
+			tr:nth-child(even) {
+				background-color: #f8f9fa;
+			}
+			tr:hover {
+				background-color: #f1f8ff;
+			}
+			.dimension {
+				font-weight: 600;
+				color: #2c3e50;
+				width: 20%;
+			}
+			.phase {
+				width: 16%;
+			}
+			.phase-content {
+				margin-bottom: 6px;
+				min-height: 60px;
+			}
+			.checkbox-container {
+				text-align: center;
+				padding-top: 6px;
+				border-top: 1px dashed #e0e0e0;
+				margin-top: 6px;
+			}
+			input[type="checkbox"] {
+				transform: scale(1.2);
+				cursor: pointer;
+			}
+			.header-row {
+				background-color: #34495e;
+			}
+			@media (max-width: 768px) {
+				table {
+					display: block;
+					overflow-x: auto;
+				}
+				th, td {
+					min-width: 180px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Simplified Data Maturity Matrix</h1>
+		<table>
+			<thead>
+				<tr class="header-row">
+					<th>Dimension</th>
+					<th>Phase 1 - Incomplete, ad hoc</th>
+					<th>Phase 2 - Recognized but reactive</th>
+					<th>Phase 3 - Managed and defined</th>
+					<th>Phase 4 - Controlled, optimizing</th>
+					<th>Phase 5 - State of the art, transformational</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="dimension">Actors & Roles</td>
+					<td class="phase"><div class="phase-content">Roles undefined; unclear responsibilities.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Key stakeholders identified but weak coordination.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Formal frameworks define roles and responsibilities.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Coordination mechanisms are routine and inclusive.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Stakeholders self-organize and collaborate dynamically.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+				</tr>
+				<tr>
+					<td class="dimension">Data Value Chain</td>
+					<td class="phase"><div class="phase-content">Data siloed and inaccessible.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Available only by formal request.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Data is accessible via structured platforms.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Metadata and standards enable reuse and interoperability.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Governance ensures ethical, secure, and open-by-default data sharing.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+				</tr>
+				<tr>
+					<td class="dimension">Governance</td>
+					<td class="phase"><div class="phase-content">No strategy or shared standards.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Importance of standards is acknowledged.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Strategy exists but lacks enforcement.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Strategy is updated regularly and increasingly enforced.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Fully implemented, nationally integrated data strategy.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+				</tr>
+				<tr>
+					<td class="dimension">Infrastructure & Interoperability</td>
+					<td class="phase"><div class="phase-content">No shared infrastructure or digital tools.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Some tools exist but are not interoperable or widely adopted.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">National infrastructure with some integration.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Interoperable systems supporting cross-sector collaboration.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Robust, scalable infrastructure with seamless data exchange.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+				</tr>
+				<tr>
+					<td class="dimension">Data Quality & Standards</td>
+					<td class="phase"><div class="phase-content">No agreed standards; data quality inconsistent or unknown.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Early steps toward standardization; uneven application.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Documented quality processes partially applied.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Consistent standards with regular updates.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">High-quality data; standards fully institutionalized.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+				</tr>
+				<tr>
+					<td class="dimension">Data Use & Impact</td>
+					<td class="phase"><div class="phase-content">Data rarely used for decisions or policy.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Used occasionally, often in response to requests.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Regularly used in reports and planning.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Embedded in workflows; informs cross-sector decisions.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+					<td class="phase"><div class="phase-content">Drives innovation, accountability, and measurable impact.</div><div class="checkbox-container"><input type="checkbox"></div></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+	</html>
 
 
 References
@@ -847,3 +1076,4 @@ References
 .. [#] Parsons, M.A.; Godøy, Ø.; Ledrew, E.; De Bruin, T.F.; Danis, B.; Tomlinson, S.; Carlson, D. A conceptual framework for managing very diverse data for complex, interdisciplinary science. J. Inf. Sci. 2011, 37, 555–569.
 .. [#] Cai, L. and Zhu, Y.: The Challenges of Data Quality and Data Quality Assessment in the Big Data Era, CODATA, 14, 2, https://doi.org/10.5334/dsj-2015-002, 2015
 .. [#] https://www.undrr.org/publication/handbook-use-risk-knowledge-multi-hazard-early-warning-systems-2024
+.. [#] For a full explanation of the Data Ecosystem Maturity Assessment Framework, please refer to the technical guidance note, which is part of Component 1 of the training.

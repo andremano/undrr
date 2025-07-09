@@ -23,3 +23,5 @@
 .. _OGC: https://www.ogc.org/
 .. _ITC Satellite sensor database: https://webapps.itc.utwente.nl/sensor/default.aspx?view=allsatellites
 .. _WMS web client: https://andremano.github.io/undrr/index.html
+.. _Google Open Buildings: https://sites.research.google/gr/open-buildings/
+.. _Global Health Data Exchance: https://ghdx.healthdata.org/

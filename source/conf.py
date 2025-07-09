@@ -38,7 +38,7 @@ link_file = ['_static/assets/external_links.rst',
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_permalinks_icon = '<span>#</span>'
-html_theme = 'sphinxawesome_theme'
+html_theme = 'alabaster'
 html_logo = "_static/itc_logo.png"
 html_static_path = ["_static"]
 html_css_files = [
